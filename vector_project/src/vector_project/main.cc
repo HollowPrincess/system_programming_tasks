@@ -10,21 +10,21 @@ class Vector
 protected:
 	T * allocator;
 public:
-	size_t * size;
+	size_t size;
 	//constructors:
 
 	//empty constructor
 	Vector()
 	{
 		allocator = new T[0];
-		*size = 0;
+		size = 0;
 	}
 
 	//copy constructor
 	Vector(Vector<T> &existingVector)
 	{
-		*this->size = existingVector.sizeOfVector();
-		for (size_t counter = 0; counter < *this->size; counter++)
+		this->size = existingVector.sizeOfVector();
+		for (size_t counter = 0; counter < this->size; counter++)
 		{
 			allocator[counter] = ::forward(existingVector.allocator[counter]);
 		}
@@ -34,11 +34,9 @@ public:
 	Vector(Vector &&existingVector)
 	{
 		allocator = nullptr;
-		size = nullptr;
 		size = existingVector.size;
 		allocator = existingVector.allocator;
 		existingVector.allocator = nullptr;
-		existingVector.size = nullptr;
 	}
 
 	//simple methods
@@ -51,38 +49,38 @@ public:
 	//end() - iterator on the after last element
 	T *end() const
 	{
-		return (allocator + *size);
+		return (allocator + size);
 	}
 
 	//size() - num of elements in the Vector
 	size_t sizeOfVector() const
 	{
-		return (*size);
+		return size;
 	}
 
 	//difficult methods:
 	//push_back(T) - add element at the tail
 	void push_back(T&& value)
 	{
-		T *newAlloc = new T[*size + 1];
+		T *newAlloc = new T[size + 1];
 		size_t counter = 0;
-		while (counter < *size) {
+		while (counter < size) {
 			newAlloc[counter] = ::move(this->allocator[counter]);
 			counter++;
 		}
-		newAlloc[*size] = ::move(value);
+		newAlloc[size] = ::move(value);
 		delete[] allocator;
         allocator = newAlloc;
-		*size += 1; 
+		size += 1; 
 	}
 
 	//pop_back() - drop element at the tail
 	void pop_back()
 	{
-		*size -= 1;
-		T *newAlloc = new T[*size];
+		size -= 1;
+		T *newAlloc = new T[size];
 		size_t counter = 0;
-		while (counter < *size) {
+		while (counter < size) {
 			newAlloc[counter] = ::move(this->allocator[counter]);
 			counter++;
 		}
@@ -115,7 +113,7 @@ public:
 			for (size_t counter = first_num; counter<this.sizeOfVector(); counter++) {
 				allocator[counter] = ::forward(allocator[counter + (last_num - first_num)]);
 			}
-			for (size_t counter = first_num; counter<*size; counter++) {
+			for (size_t counter = first_num; counter<size; counter++) {
 				this.pop_back();
 			}
 		}
@@ -152,7 +150,6 @@ public:
 	//destructor
 	~Vector()
 	{
-		delete size;
 		delete[] allocator;
 	}
 };
@@ -166,6 +163,9 @@ void Swap(Vector<T> &leftVector, Vector<T> &rightVector)
 
 int main()
 {
+	::ofstream myLog("myLog.txt", ::ofstream::out);
+	myLog << "Hello";
+
 	//create vector with ofstream elements
 	::ofstream ofs1("ofs1.txt", ::ofstream::out);
 	::ofstream ofs2("ofs2.txt", ::ofstream::out);
@@ -187,5 +187,6 @@ int main()
 	myVec[1] << 2;
 	myVec[2] << 3;
 	myVec[3] << 4;
+
 	return 0;
 }
