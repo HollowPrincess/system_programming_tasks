@@ -163,8 +163,8 @@ void Swap(Vector<T> &leftVector, Vector<T> &rightVector)
 
 int main()
 {
-	::ofstream myLog("myLog.txt", ::ofstream::out);
-	myLog << "Hello";
+	//::ofstream myLog("myLog.txt", ::ofstream::out);
+	//myLog << "Hello";
 
 	//create vector with ofstream elements
 	::ofstream ofs1("ofs1.txt", ::ofstream::out);
