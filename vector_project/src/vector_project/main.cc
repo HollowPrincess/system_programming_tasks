@@ -1,6 +1,7 @@
 #include <new>
-#include <cstddef>
 #include <algorithm>
+#include <fstream>
+#include <random>
 using namespace std;
 
 template <typename T>
@@ -36,33 +37,9 @@ class Vector
 		for (size_t counter = 0; counter < min(*existingVector->size,new_size); counter++)
 		{
 			allocator[counter] = ::forward(existingVector.allocator[counter]);
-		}		
+		}
 		//CHECK
 	}
-	//move
-	/*void move(Vector&& rightVector){
-		//CHECK IT
-		//may be this is not important part
-		head_ptr = nullptr;
-		tail_ptr = nullptr;
-		dead_end_ptr=nullptr;
-		//capacity=nullptr;
-		myalloc=nullptr;
-
-		head_ptr=rightVector.head_ptr;
-		tail_ptr=rightVector.tail_ptr;
-		dead_end_ptr=rightVector.dead_end_ptr;
-		capacity=rightVector.capacity;
-		myalloc=rightVector.myalloc;
-
-		rightVector.head_ptr=nullptr;
-		rightVector.tail_ptr = nullptr;
-		rightVector.dead_end_ptr=nullptr;
-		rightVector.myalloc=nullptr;
-		//rightVector.capacity=nullptr;//protection from destructor 
-	}*/
-	//MAYBE I NEED IT
-
 
 //move constructor
 	Vector(Vector &&existingVector)
@@ -96,7 +73,6 @@ class Vector
 
 	//difficult methods:
 	//push_back(T) - add element at the tail
-
 	void push_back(const T &value)
 	{
 		*this->size += 1;
@@ -143,7 +119,7 @@ class Vector
 			}
 			for (size_t counter=first_num;counter<*size;counter++){
 				this.pop_back();
-			}			
+			}
 		}
 	}
 	//swap() vectors
@@ -151,7 +127,7 @@ class Vector
 	{
 		Vector<T> tmp(*this);
 		this = ::move(rightVector);
-		rightVector = ::move(tmp); 
+		rightVector = ::move(tmp);
 	}
 
 	friend void swap(Vector<T> &, Vector<T> &);
@@ -188,6 +164,25 @@ void swap(Vector<T> &leftVector, Vector<T> &rightVector)
 
 int main()
 {
-	//check all methods
+	//create vector with ofstream elements
+  ::ofstream ofs1("ofs1.txt", ::ofstream::out);
+  ::ofstream ofs2("ofs2.txt", ::ofstream::out);
+  ::ofstream ofs3("ofs3.txt", ::ofstream::out);
+  ::ofstream ofs4("ofs4.txt", ::ofstream::out);
+
+  Vector<::ofstream> myVec;
+  myVec.push_back(ofs1);
+  myVec.push_back(ofs2);
+  myVec.push_back(ofs3);
+  myVec.push_back(ofs4);
+
+  std::random_device rd;
+  std::mt19937 g(rd());
+  std::shuffle(myVec.begin(), myVec.end(), g);
+
+  myVec[0]<<1;
+  myVec[1]<<2;
+  myVec[2]<<3;
+  myVec[3]<<4;
 	return 0;
 }
