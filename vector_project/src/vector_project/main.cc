@@ -7,10 +7,10 @@ using namespace std;
 template <typename T>
 class Vector
 {
-  protected:
-	T *allocator;
-  public:
-	size_t *size;
+protected:
+	T * allocator;
+public:
+	size_t * size;
 	//constructors:
 
 	//empty constructor
@@ -34,18 +34,18 @@ class Vector
 	{
 		*this->size = new_size;
 		this->allocator = new T[new_size];
-		for (size_t counter = 0; counter < min(*existingVector->size,new_size); counter++)
+		for (size_t counter = 0; counter < min(*existingVector->size, new_size); counter++)
 		{
 			allocator[counter] = ::forward(existingVector.allocator[counter]);
 		}
 		//CHECK
 	}
 
-//move constructor
+	//move constructor
 	Vector(Vector &&existingVector)
 	{
 		allocator = nullptr;
-		size=nullptr;
+		size = nullptr;
 		size = existingVector.size;
 		allocator = existingVector.allocator;
 		existingVector.allocator = nullptr;
@@ -62,7 +62,7 @@ class Vector
 	//end() - iterator on the after last element
 	T *end() const
 	{
-		return (allocator+*size);
+		return (allocator + *size);
 	}
 
 	//size() - num of elements in the Vector
@@ -73,22 +73,26 @@ class Vector
 
 	//difficult methods:
 	//push_back(T) - add element at the tail
-	void push_back(const T &value)
+	void push_back(T& value)
 	{
-		*this->size += 1;
-		Vector<T> tmp(this, size);
-		//add new element
-		*tmp.allocator[*size] = value;
-		this.swap(tmp);
-		//CHECK is tmp will be deleted
+		T *newAlloc = new T[*size + 1];
+		size_t counter = 0;
+		while (counter < *size) {
+			newAlloc[counter] = this->allocator[counter];
+			counter++;
+		}
+		newAlloc[*size] = value;
+
+
+		//think
 	}
 
 	//pop_back() - drop element at the tail
 	void pop_back()
 	{
-		*this->size -= 1;
-		Vector<T> tmp(this, size);
-		//CHEK not to copy last element
+		*size -= 1;
+		Vector<T> tmp(*this);
+		//CHECK not to copy last element
 		this.swap(tmp);
 	}
 
@@ -97,9 +101,9 @@ class Vector
 	void erase(size_t num_of_pos)
 	{
 		//move the tail on one position and pop_back
-		if (this.sizeOfVector()>=num_of_pos){
-			for (size_t counter=num_of_pos;counter<this.sizeOfVector();counter++){
-				*this->allocator[counter]=*this->allocator[counter+1];
+		if (this.sizeOfVector() >= num_of_pos) {
+			for (size_t counter = num_of_pos; counter<this.sizeOfVector(); counter++) {
+				allocator[counter] = ::forward(allocator[counter + 1]);
 			}
 			this.pop_back();
 		}
@@ -107,17 +111,17 @@ class Vector
 
 	void erase(size_t first_num, size_t last_num)
 	{
-		if(first_num>last_num){
-			first_num+=last_num;
-			last_num=first_num-last_num;
-			first_num=first_num-last_num;
+		if (first_num>last_num) {
+			first_num += last_num;
+			last_num = first_num - last_num;
+			first_num = first_num - last_num;
 		}
 		//move the tail on (last_num-first_num) position and pop_back
-		if (this.sizeOfVector()>=last_num){
-			for (size_t counter=first_num;counter<this.sizeOfVector();counter++){
-				*this->allocator[counter]=*this->allocator[counter+(last_num-first_num)];
+		if (this.sizeOfVector() >= last_num) {
+			for (size_t counter = first_num; counter<this.sizeOfVector(); counter++) {
+				allocator[counter] = ::forward(allocator[counter + (last_num - first_num)]);
 			}
-			for (size_t counter=first_num;counter<*size;counter++){
+			for (size_t counter = first_num; counter<*size; counter++) {
 				this.pop_back();
 			}
 		}
@@ -130,7 +134,7 @@ class Vector
 		rightVector = ::move(tmp);
 	}
 
-	friend void swap(Vector<T> &, Vector<T> &);
+	friend void Swap(Vector<T> &, Vector<T> &);
 
 	//operators:
 	//operator=
@@ -147,17 +151,21 @@ class Vector
 		return *this;
 	}
 
+	T &operator[](const size_t pos) {
+		return allocator[pos];
+	}
+
 	//destructor
 	~Vector()
 	{
 		delete size;
-		delete [] allocator;
+		delete[] allocator;
 	}
 };
 
 //swap() vectors
 template <typename T>
-void swap(Vector<T> &leftVector, Vector<T> &rightVector)
+void Swap(Vector<T> &leftVector, Vector<T> &rightVector)
 {
 	leftVector.swap(rightVector);
 };
@@ -165,24 +173,30 @@ void swap(Vector<T> &leftVector, Vector<T> &rightVector)
 int main()
 {
 	//create vector with ofstream elements
-  ::ofstream ofs1("ofs1.txt", ::ofstream::out);
-  ::ofstream ofs2("ofs2.txt", ::ofstream::out);
-  ::ofstream ofs3("ofs3.txt", ::ofstream::out);
-  ::ofstream ofs4("ofs4.txt", ::ofstream::out);
+	::ofstream ofs1("ofs1.txt", ::ofstream::out);
+	::ofstream ofs2("ofs2.txt", ::ofstream::out);
+	::ofstream ofs3("ofs3.txt", ::ofstream::out);
+	::ofstream ofs4("ofs4.txt", ::ofstream::out);
 
-  Vector<::ofstream> myVec;
-  myVec.push_back(ofs1);
-  myVec.push_back(ofs2);
-  myVec.push_back(ofs3);
-  myVec.push_back(ofs4);
+	Vector<::ofstream> myVec;
+	/*
+	myVec.push_back(::move(ofs1));
+	myVec.push_back(::move(ofs2));
+	myVec.push_back(::move(ofs3));
+	myVec.push_back(::move(ofs4));*/
 
-  std::random_device rd;
-  std::mt19937 g(rd());
-  std::shuffle(myVec.begin(), myVec.end(), g);
+	myVec.push_back(ofs1);
+	myVec.push_back(ofs2);
+	myVec.push_back(ofs3);
+	myVec.push_back(ofs4);
 
-  myVec[0]<<1;
-  myVec[1]<<2;
-  myVec[2]<<3;
-  myVec[3]<<4;
+	std::random_device rd;
+	std::mt19937 g(rd());
+	std::shuffle(myVec.begin(), myVec.end(), g);
+
+	myVec[0] << 1;
+	myVec[1] << 2;
+	myVec[2] << 3;
+	myVec[3] << 4;
 	return 0;
 }
