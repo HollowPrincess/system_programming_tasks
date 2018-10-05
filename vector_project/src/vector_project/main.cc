@@ -21,24 +21,13 @@ public:
 	}
 
 	//copy constructor
-	Vector(const Vector<T> &existingVector)
+	Vector(Vector<T> &existingVector)
 	{
 		*this->size = existingVector.sizeOfVector();
 		for (size_t counter = 0; counter < *this->size; counter++)
 		{
 			allocator[counter] = ::forward(existingVector.allocator[counter]);
 		}
-	}
-	//copy constructor with another size
-	Vector(const Vector<T> &existingVector, const size_t new_size)
-	{
-		*this->size = new_size;
-		this->allocator = new T[new_size];
-		for (size_t counter = 0; counter < min(*existingVector->size, new_size); counter++)
-		{
-			allocator[counter] = ::forward(existingVector.allocator[counter]);
-		}
-		//CHECK
 	}
 
 	//move constructor
@@ -73,27 +62,32 @@ public:
 
 	//difficult methods:
 	//push_back(T) - add element at the tail
-	void push_back(T& value)
+	void push_back(T&& value)
 	{
 		T *newAlloc = new T[*size + 1];
 		size_t counter = 0;
 		while (counter < *size) {
-			newAlloc[counter] = this->allocator[counter];
+			newAlloc[counter] = ::move(this->allocator[counter]);
 			counter++;
 		}
-		newAlloc[*size] = value;
-
-
-		//think
+		newAlloc[*size] = ::move(value);
+		delete[] allocator;
+        allocator = newAlloc;
+		*size += 1; 
 	}
 
 	//pop_back() - drop element at the tail
 	void pop_back()
 	{
 		*size -= 1;
-		Vector<T> tmp(*this);
-		//CHECK not to copy last element
-		this.swap(tmp);
+		T *newAlloc = new T[*size];
+		size_t counter = 0;
+		while (counter < *size) {
+			newAlloc[counter] = ::move(this->allocator[counter]);
+			counter++;
+		}
+		delete[] allocator;
+        allocator = newAlloc;		 
 	}
 
 	//erase() - delete elements //look cpp
@@ -134,7 +128,7 @@ public:
 		rightVector = ::move(tmp);
 	}
 
-	friend void Swap(Vector<T> &, Vector<T> &);
+	//friend void Swap(Vector<T>&, Vector<T>&);
 
 	//operators:
 	//operator=
@@ -179,16 +173,11 @@ int main()
 	::ofstream ofs4("ofs4.txt", ::ofstream::out);
 
 	Vector<::ofstream> myVec;
-	/*
+	
 	myVec.push_back(::move(ofs1));
 	myVec.push_back(::move(ofs2));
 	myVec.push_back(::move(ofs3));
-	myVec.push_back(::move(ofs4));*/
-
-	myVec.push_back(ofs1);
-	myVec.push_back(ofs2);
-	myVec.push_back(ofs3);
-	myVec.push_back(ofs4);
+	myVec.push_back(::move(ofs4));
 
 	std::random_device rd;
 	std::mt19937 g(rd());
