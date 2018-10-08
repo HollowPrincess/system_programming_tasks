@@ -112,11 +112,13 @@ public:
 		//move the tail on (last_num-first_num) position and pop_back
 		if (this->sizeOfVector() >= last_num) {
 			for (size_t counter = first_num; counter<this->sizeOfVector(); counter++) {
-				allocator[counter] = ::forward(allocator[counter + (last_num - first_num)]);
-			}
+				if (size>=counter+(last_num - first_num)+1){
+					allocator[counter] = ::forward<T>(allocator[counter + (last_num - first_num)+1]);
+				};
+			};
 			for (size_t counter = first_num; counter<size; counter++) {
 				this->pop_back();
-			}
+			};
 		};
 	}
 	//swap() vectors
@@ -218,6 +220,7 @@ int main()
 	myLog << myVec.sizeOfVector();
 	myLog << "\n";	
 
+	myVec[3] << "\n"<<"it was pop_back, so it contains only one number";
 	myVec.pop_back();
 
 	myLog << "size: ";
@@ -241,14 +244,16 @@ int main()
 	myLog << myVec.sizeOfVector();
 	myLog << "\n";	
 
-	myVec.erase(1);
+	myVec[0]<<" it was erased";
+	myVec[1]<<" it was erased";
+	myVec.erase(0,1);
 
 	myLog << "size: ";
 	myLog << myVec.sizeOfVector();
 	myLog << "\n";
-	myVec[0] << "==1";
-	myVec[1] << "!=2 & ==3";
-
+	//myVec[0] << "==1";
+	//myVec[1] << "!=2 & ==3";
+	myVec[0]<<"==3";
 
 	return 0;
 }
