@@ -23,8 +23,8 @@ public:
 	//copy constructor
 	Vector(Vector<T> &existingVector)
 	{
-		this->size = existingVector.sizeOfVector();
-		for (size_t counter = 0; counter < this->size; counter++)
+		size = existingVector.sizeOfVector();
+		for (size_t counter = 0; counter < size; counter++)
 		{
 			allocator[counter] = ::forward(existingVector.allocator[counter]);
 		}
@@ -121,9 +121,17 @@ public:
 	//swap() vectors
 	void swap(Vector<T> &rightVector)
 	{
-		Vector<T> tmp(*this);
-		this = ::move(rightVector);
-		rightVector = ::move(tmp);
+		/*Vector<T> tmp(*this);
+		*this = ::move(rightVector);
+		rightVector = ::move(tmp);*/
+		T *tmpAlloc=allocator;
+		size_t tmpSize = size;
+
+		allocator=rightVector.allocator;
+		size=rightVector.size;
+
+        rightVector.allocator = tmpAlloc;
+        rightVector.size = tmpSize;
 	}
 
 	//friend void Swap(Vector<T>&, Vector<T>&);
@@ -133,7 +141,7 @@ public:
 	Vector<T> &operator=(const Vector<T> &&rightVector)
 	{
 		Vector<T> tmp(rightVector);
-		this.swap(tmp);
+		this->swap(tmp);
 		return *this;
 	}
 
@@ -166,27 +174,40 @@ int main()
 	//::ofstream myLog("myLog.txt", ::ofstream::out);
 	//myLog << "Hello";
 
+	//push_back test:
 	//create vector with ofstream elements
 	::ofstream ofs1("ofs1.txt", ::ofstream::out);
 	::ofstream ofs2("ofs2.txt", ::ofstream::out);
 	::ofstream ofs3("ofs3.txt", ::ofstream::out);
 	::ofstream ofs4("ofs4.txt", ::ofstream::out);
+	::ofstream ofs5("ofs5.txt", ::ofstream::out);
+	::ofstream ofs6("ofs6.txt", ::ofstream::out);
 
-	Vector<::ofstream> myVec;
+	Vector<::ofstream> myVec; 
 	
 	myVec.push_back(::move(ofs1));
 	myVec.push_back(::move(ofs2));
 	myVec.push_back(::move(ofs3));
 	myVec.push_back(::move(ofs4));
 
+	//shuffle elements in vector
 	std::random_device rd;
 	std::mt19937 g(rd());
 	std::shuffle(myVec.begin(), myVec.end(), g);
 
+	//show the results in files
 	myVec[0] << 1;
 	myVec[1] << 2;
 	myVec[2] << 3;
 	myVec[3] << 4;
 
+	//oper= test:
+	Vector<::ofstream> anotherVec1;
+	Vector<::ofstream> anotherVec2;
+	anotherVec1.push_back(::move(ofs5));
+	anotherVec2.push_back(::move(ofs6));
+
+	anotherVec1=::move(anotherVec2);
+	anotherVec1[0] << "must be ofs6.txt file";
 	return 0;
 }
