@@ -67,6 +67,13 @@ build src/tests_train/src@tests_train@@tests_train@exe/main.cc.o: cpp_COMPILER .
 build src/tests_train/tests_train: cpp_LINKER src/tests_train/src@tests_train@@tests_train@exe/main.cc.o
  LINK_ARGS = -Wl,--no-undefined -Wl,--as-needed
 
+build src/tests/src@tests@@message_test@exe/message_test.cc.o: cpp_COMPILER ../src/tests/message_test.cc
+ DEPFILE = src/tests/src@tests@@message_test@exe/message_test.cc.o.d
+ ARGS = -Isrc/tests/src@tests@@message_test@exe -Isrc/tests -I../src/tests -Isrc -I../src -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++11 -g -pthread
+
+build src/tests/message_test: cpp_LINKER src/tests/src@tests@@message_test@exe/message_test.cc.o | /usr/lib/libgtest.a /usr/lib/libgtest_main.a
+ LINK_ARGS = -Wl,--no-undefined -Wl,--as-needed -Wl,--start-group -lgtest -lgtest_main -Wl,--end-group -pthread
+
 # Test rules
 
 build meson-test: CUSTOM_COMMAND all PHONY
@@ -113,7 +120,7 @@ build meson-uninstall: CUSTOM_COMMAND PHONY
 
 build uninstall: phony meson-uninstall
 
-build all: phony src/tests_train/tests_train
+build all: phony src/tests_train/tests_train src/tests/message_test
 
 default all
 
@@ -123,11 +130,11 @@ build meson-clean: CUSTOM_COMMAND PHONY
  COMMAND = ninja -t clean
  description = Cleaning.
 
-build build.ninja: REGENERATE_BUILD ../meson.build ../src/meson.build ../src/tests_train/meson.build meson-private/coredata.dat
+build build.ninja: REGENERATE_BUILD ../meson.build ../src/meson.build ../src/tests_train/meson.build ../src/tests/meson.build meson-private/coredata.dat
  pool = console
 
 build reconfigure: REGENERATE_BUILD PHONY
  pool = console
 
-build ../meson.build ../src/meson.build ../src/tests_train/meson.build meson-private/coredata.dat: phony 
+build ../meson.build ../src/meson.build ../src/tests_train/meson.build ../src/tests/meson.build meson-private/coredata.dat: phony 
 

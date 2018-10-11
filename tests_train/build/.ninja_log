@@ -1,1 +1,10 @@
 # ninja log v5
+0	977	1539187018	src/tests_train/src@tests_train@@tests_train@exe/main.cc.o	14ad87d56c504168
+979	1294	1539187018	src/tests_train/tests_train	83b379e121290239
+0	1099	1539262021	build.ninja	206b477fc5410f3a
+2	742	1539262142	src/tests_train/src@tests_train@@tests_train@exe/main.cc.o	14ad87d56c504168
+742	830	1539262142	src/tests_train/tests_train	83b379e121290239
+2	754	1539262220	src/tests_train/src@tests_train@@tests_train@exe/main.cc.o	14ad87d56c504168
+755	843	1539262221	src/tests_train/tests_train	83b379e121290239
+4	2490	1539262222	src/tests/src@tests@@message_test@exe/message_test.cc.o	2582144cde09fcfa
+2491	2908	1539262223	src/tests/message_test	cf5d8c14fdb5574a
