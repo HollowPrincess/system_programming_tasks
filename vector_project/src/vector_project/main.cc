@@ -2,7 +2,6 @@
 #include <fstream>
 #include <algorithm>
 #include <random>
-using namespace std;
 
 template <typename T>
 class Vector
@@ -21,22 +20,19 @@ public:
 	}
 
 	//copy constructor
-	Vector(Vector<T> &existingVector)
+	Vector(Vector &existingVector)
 	{
 		size = existingVector.sizeOfVector();
 		for (size_t counter = 0; counter < size; counter++)
 		{
-			allocator[counter] = ::forward<T>(existingVector.allocator[counter]);
+			allocator[counter] = std::forward(existingVector.allocator[counter]);
 		}
 	}
 
 	//move constructor
 	Vector(Vector &&existingVector)
 	{
-		allocator = nullptr;
-		size = existingVector.size;
-		allocator = existingVector.allocator;
-		existingVector.allocator = nullptr;
+		this->swap(existingVector);
 	}
 
 	//simple methods
@@ -65,10 +61,10 @@ public:
 		T *newAlloc = new T[size + 1];
 		size_t counter = 0;
 		while (counter < size) {
-			newAlloc[counter] = ::move(this->allocator[counter]);
+			newAlloc[counter] = std::move(this->allocator[counter]);
 			counter++;
 		}
-		newAlloc[size] = ::move(value);
+		newAlloc[size] = std::move(value);
 		delete[] allocator;
         allocator = newAlloc;
 		size += 1; 
@@ -80,7 +76,7 @@ public:
 		T *newAlloc = new T[size];
 		size_t counter = 0;
 		while (counter < size) {
-			newAlloc[counter] = ::move(this->allocator[counter]);
+			newAlloc[counter] = std::move(this->allocator[counter]);
 			counter++;
 		}
 		delete[] allocator;
@@ -95,7 +91,7 @@ public:
 		//move the tail on one position and pop_back		
 		if (this->sizeOfVector() > num_of_pos) {
 			for (size_t counter = num_of_pos; counter<this->sizeOfVector(); counter++) {
-				allocator[counter] = ::forward<T>(allocator[counter + 1]);
+				allocator[counter] = std::forward<T>(allocator[counter + 1]);
 			}
 			this->pop_back();
 		}
@@ -113,7 +109,7 @@ public:
 		if (this->sizeOfVector() >= last_num) {
 			for (size_t counter = first_num; counter<this->sizeOfVector(); counter++) {
 				if (size>=counter+(last_num - first_num)+1){
-					allocator[counter] = ::forward<T>(allocator[counter + (last_num - first_num)+1]);
+					allocator[counter] = std::forward<T>(allocator[counter + (last_num - first_num)+1]);
 				};
 			};
 			for (size_t counter = first_num; counter<size; counter++) {
@@ -125,8 +121,8 @@ public:
 	void swap(Vector<T> &rightVector)
 	{
 		/*Vector<T> tmp(*this);
-		*this = ::move(rightVector);
-		rightVector = ::move(tmp);*/
+		*this = std::move(rightVector);
+		rightVector = std::move(tmp);*/
 		T *tmpAlloc=allocator;
 		size_t tmpSize = size;
 
@@ -137,18 +133,16 @@ public:
         rightVector.size = tmpSize;
 	}
 
-	//friend void Swap(Vector<T>&, Vector<T>&);
-
 	//operators:
 	//operator=
-	Vector<T> &operator=(const Vector<T> &&rightVector)
+	Vector &operator=(const Vector &&rightVector)
 	{
 		Vector<T> tmp(rightVector);
 		this->swap(tmp);
 		return *this;
 	}
 
-	Vector<T> &operator=(Vector<T> &&rightVector)
+	Vector &operator=(Vector &&rightVector)
 	{
 		this->swap(rightVector);
 		return *this;
@@ -174,29 +168,28 @@ void Swap(Vector<T> &leftVector, Vector<T> &rightVector)
 
 int main()
 {
-	::ofstream myLog("myLog.txt", ::ofstream::out);
-	//myLog << "Hello";
+	std::ofstream myLog("myLog.txt", std::ofstream::out);
 
 	//push_back test:
 	//create vector with ofstream elements
-	::ofstream ofs1("ofs1.txt", ::ofstream::out);
-	::ofstream ofs2("ofs2.txt", ::ofstream::out);
-	::ofstream ofs3("ofs3.txt", ::ofstream::out);
-	::ofstream ofs4("ofs4.txt", ::ofstream::out);
-	::ofstream ofs5("ofs5.txt", ::ofstream::out);
-	::ofstream ofs6("ofs6.txt", ::ofstream::out);
+	std::ofstream ofs1("ofs1.txt", std::ofstream::out);
+	std::ofstream ofs2("ofs2.txt", std::ofstream::out);
+	std::ofstream ofs3("ofs3.txt", std::ofstream::out);
+	std::ofstream ofs4("ofs4.txt", std::ofstream::out);
+	std::ofstream ofs5("ofs5.txt", std::ofstream::out);
+	std::ofstream ofs6("ofs6.txt", std::ofstream::out);
 
-	Vector<::ofstream> myVec; 
+	Vector<std::ofstream> myVec; 
 	
-	myVec.push_back(::move(ofs1));
-	myVec.push_back(::move(ofs2));
-	myVec.push_back(::move(ofs3));
-	myVec.push_back(::move(ofs4));
+	myVec.push_back(std::move(ofs1));
+	myVec.push_back(std::move(ofs2));
+	myVec.push_back(std::move(ofs3));
+	myVec.push_back(std::move(ofs4));
 
 	//shuffle elements in vector
-	::random_device rd;
-	::mt19937 g(rd());
-	::shuffle(myVec.begin(), myVec.end(), g);
+	std::random_device rd;
+	std::mt19937 g(rd());
+	std::shuffle(myVec.begin(), myVec.end(), g);
 
 	//show the results in files
 	myVec[0] << 1;
@@ -205,12 +198,12 @@ int main()
 	myVec[3] << 4;
 
 	//oper= test:
-	Vector<::ofstream> anotherVec1;
-	Vector<::ofstream> anotherVec2;
-	anotherVec1.push_back(::move(ofs5));
-	anotherVec2.push_back(::move(ofs6));
+	Vector<std::ofstream> anotherVec1;
+	Vector<std::ofstream> anotherVec2;
+	anotherVec1.push_back(std::move(ofs5));
+	anotherVec2.push_back(std::move(ofs6));
 
-	anotherVec1=::move(anotherVec2);
+	anotherVec1=std::move(anotherVec2);
 	anotherVec1[0] << "must be ofs6.txt file";
 
 
