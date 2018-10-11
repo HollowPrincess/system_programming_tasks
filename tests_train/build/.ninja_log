@@ -8,3 +8,8 @@
 755	843	1539262221	src/tests_train/tests_train	83b379e121290239
 4	2490	1539262222	src/tests/src@tests@@message_test@exe/message_test.cc.o	2582144cde09fcfa
 2491	2908	1539262223	src/tests/message_test	cf5d8c14fdb5574a
+0	2030	1539268438	build.ninja	206b477fc5410f3a
+118	2030	1539268440	src/tests_train/src@tests_train@@tests_train@exe/main.cc.o	fcc1b0e71d1569cb
+2030	2397	1539268440	src/tests_train/tests_train	58e79ee65d87c05b
+119	4440	1539268442	src/tests/src@tests@@message_test@exe/message_test.cc.o	72772dd10a2ccc3e
+4440	4962	1539268443	src/tests/message_test	52a5c09022e7e28c
