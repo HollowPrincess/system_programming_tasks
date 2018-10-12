@@ -1,2 +1,3 @@
-4
-it was pop_back, so it contains only one number
+3==3
+ & !=4
+==3
