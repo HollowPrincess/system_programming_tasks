@@ -1,2 +1,2 @@
-4
-it was pop_back, so it contains only one number
+2==2
+ it was erased

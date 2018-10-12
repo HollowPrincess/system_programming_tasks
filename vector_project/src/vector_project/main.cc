@@ -23,7 +23,7 @@ public:
 	Vector(Vector &existingVector)
 	{
 		/*size = existingVector.sizeOfVector();
-		allocator = new T[size];//check this is new line
+		allocator = new T[size];
 		for (size_t counter = 0; counter < size; counter++)
 		{
 			allocator[counter] = std::forward(existingVector.allocator[counter]);
@@ -141,12 +141,12 @@ public:
 	//operator=
 	Vector &operator=(const Vector &&rightVector)
 	{
-		size = existingVector.sizeOfVector();
-		allocator = new T[size];//check this is new line
+		size = rightVector.sizeOfVector();
+		allocator = new T[size];
 		for (size_t counter = 0; counter < size; counter++)
 		{
-			allocator[counter] = std::forward(existingVector.allocator[counter]);
-		}
+			allocator[counter] = std::forward(rightVector.allocator[counter]);
+		};
 		
 		//Vector<T> tmp(rightVector);
 		//this->swap(tmp);

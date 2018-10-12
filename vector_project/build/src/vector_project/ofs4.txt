@@ -1,2 +1,2 @@
-1==1
- it was erased
+4
+it was pop_back, so it contains only one number
