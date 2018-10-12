@@ -22,11 +22,15 @@ public:
 	//copy constructor
 	Vector(Vector &existingVector)
 	{
-		size = existingVector.sizeOfVector();
+		/*size = existingVector.sizeOfVector();
+		allocator = new T[size];//check this is new line
 		for (size_t counter = 0; counter < size; counter++)
 		{
 			allocator[counter] = std::forward(existingVector.allocator[counter]);
-		}
+		}*/
+		Vector<T> tmp();
+		tmp=existingVector;
+		this->swap(tmp);
 	}
 
 	//move constructor
@@ -137,9 +141,17 @@ public:
 	//operator=
 	Vector &operator=(const Vector &&rightVector)
 	{
-		Vector<T> tmp(rightVector);
-		this->swap(tmp);
+		size = existingVector.sizeOfVector();
+		allocator = new T[size];//check this is new line
+		for (size_t counter = 0; counter < size; counter++)
+		{
+			allocator[counter] = std::forward(existingVector.allocator[counter]);
+		}
+		
+		//Vector<T> tmp(rightVector);
+		//this->swap(tmp);
 		return *this;
+		
 	}
 
 	Vector &operator=(Vector &&rightVector)
