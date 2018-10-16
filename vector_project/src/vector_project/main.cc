@@ -21,7 +21,7 @@ class Vector
 	}
 
 	//copy constructor
-	Vector(Vector &existingVector)
+	Vector(const Vector &existingVector)
 	{
 		size = existingVector.sizeOfVector();
 		allocator = new T[size];
@@ -144,7 +144,7 @@ class Vector
 
 	//operators:
 	//operator=
-	Vector &operator=(const Vector &&rightVector)
+	Vector &operator=(const Vector &rightVector)
 	{
 		if (this != &rightVector)
 		{
