@@ -1,5 +1,7 @@
 param_tests_src = files([
- 'MyGuard.cc'
+ 'MyGuard.cc',
+ 'MyArray2D.cc',
+ 'MyMaskedArray2D.cc'
 ])
 executable(
  'param_tests',

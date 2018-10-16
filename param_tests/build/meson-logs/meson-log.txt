@@ -1,4 +1,4 @@
-Build started at 2018-10-16T17:37:10.508642
+Build started at 2018-10-16T19:17:47.086778
 Main binary: /usr/bin/python3
 Python system: Linux
 The Meson build system
@@ -11,13 +11,13 @@ Project version: 0.1.0
 Native C++ compiler: c++ (gcc 7.3.0 "c++ (Ubuntu 7.3.0-27ubuntu1~18.04) 7.3.0")
 Build machine cpu family: x86_64
 Build machine cpu: x86_64
-src/param_tests/meson.build:4: WARNING: Passed invalid keyword argument "dependences".
+src/param_tests/meson.build:6: WARNING: Passed invalid keyword argument "dependences".
 WARNING: This will become a hard error in the future.
 Build targets in project: 1
 Found ninja-1.8.2 at /usr/bin/ninja
 Running compile:
-Working directory:  /tmp/tmph_396iol
-Command line:  c++ /tmp/tmph_396iol/testfile.cpp -pipe -D_FILE_OFFSET_BITS=64 -c -o /tmp/tmph_396iol/output.obj -std=c++11 
+Working directory:  /tmp/tmpzsdvxoqm
+Command line:  c++ /tmp/tmpzsdvxoqm/testfile.cpp -pipe -D_FILE_OFFSET_BITS=64 -c -o /tmp/tmpzsdvxoqm/output.obj -std=c++11 
 
 Code:
  int i = static_cast<int>(0);
@@ -27,8 +27,8 @@ Compiler stderr:
  
 Compiler accepts -std=c++11: YES
 Running compile:
-Working directory:  /tmp/tmpr8yqrhkc
-Command line:  c++ /tmp/tmpr8yqrhkc/testfile.cpp -pipe -D_FILE_OFFSET_BITS=64 -c -o /tmp/tmpr8yqrhkc/output.obj -O0 -fpermissive --print-search-dirs 
+Working directory:  /tmp/tmpxtr14fnl
+Command line:  c++ /tmp/tmpxtr14fnl/testfile.cpp -pipe -D_FILE_OFFSET_BITS=64 -c -o /tmp/tmpxtr14fnl/output.obj -O0 -fpermissive --print-search-dirs 
 
 Code:
  

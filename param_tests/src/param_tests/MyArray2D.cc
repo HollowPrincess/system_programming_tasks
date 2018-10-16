@@ -1,10 +1,10 @@
 template <typename T>
 class MyArray2D{
-public:
   T** array2DPtr;
-	int rows;
-	int cols;
+  int rows;
+  int cols;
 
+public:
   //empty constructor
 	MyArray2D() {
     rows=0;
@@ -50,14 +50,14 @@ public:
   //operator=
   MyArray2D& operator=(const MyArray2D &rightArray2D) {
 		if (this == rightArray2D) {
-			return this;
+			return *this;
 		}
 		else {
 			this->cols = rightArray2D.cols;
 			this->rows = rightArray2D.rows;
 			for (int i = 0; i < cols; i++) {
 				for (int j = 0; j < rows; j++) {
-					this->array2DPtr[j][i] = std::forward(rightArray2D.array2DPtr[j][i]);
+					this->array2DPtr[j][i] = rightArray2D.array2DPtr[j][i];
 				};
 			};
 			return *this;
@@ -65,117 +65,105 @@ public:
 	}
 
   //element-by-element arithmetic operations
-	MyArray2D& operator*(const MyArray2D &rightArray2D) const {
-		MyArray2D* result = new MyArray2D(rows, cols);
+	MyArray2D<T>& operator*(const MyArray2D &rightArray2D) const {
+		MyArray2D<T>* result = new MyArray2D(rows, cols);
 		for (int countRow = 0; countRow < this->rows; countRow++) {
 			for (int countCol = 0; countCol < this->cols; countCol++) {
-					result->array2DPtr[countRow][countCol] = std::forward(this->array2DPtr[countRow][countCol]*rightArray2D.array2DPtr[countRow][countCol]);
+					result->array2DPtr[countRow][countCol] = this->array2DPtr[countRow][countCol]*rightArray2D.array2DPtr[countRow][countCol];
 			};
 		};
 		return *result;
 	};
 
-	MyArray2D& operator+(const MyArray2D &rightArray2D) const {
-    MyArray2D* result = new MyArray2D(rows, cols);
+	MyArray2D<T>& operator+(const MyArray2D &rightArray2D) const {
+    MyArray2D<T>* result = new MyArray2D(rows, cols);
 		for (int countRow = 0; countRow < this->rows; countRow++) {
 			for (int countCol = 0; countCol < this->cols; countCol++) {
-					result->array2DPtr[countRow][countCol] = std::forward(this->array2DPtr[countRow][countCol]+rightArray2D.array2DPtr[countRow][countCol]);
+					result->array2DPtr[countRow][countCol] = this->array2DPtr[countRow][countCol]+rightArray2D.array2DPtr[countRow][countCol];
 			};
 		};
 		return *result;
 	};
 
-	MyArray2D& operator-(const MyArray2D &rightArray2D) const {
-    MyArray2D* result = new MyArray2D(rows, cols);
+	MyArray2D<T>& operator-(const MyArray2D &rightArray2D) const {
+    MyArray2D<T>* result = new MyArray2D(rows, cols);
 		for (int countRow = 0; countRow < this->rows; countRow++) {
 			for (int countCol = 0; countCol < this->cols; countCol++) {
-					result->array2DPtr[countRow][countCol] = std::forward(this->array2DPtr[countRow][countCol]-rightArray2D.array2DPtr[countRow][countCol]);
+					result->array2DPtr[countRow][countCol] = this->array2DPtr[countRow][countCol]-rightArray2D.array2DPtr[countRow][countCol];
 			};
 		};
 		return *result;
 	};
 
-	MyArray2D& operator/(const MyArray2D &rightArray2D) const {
-    MyArray2D* result = new MyArray2D(rows, cols);
+	MyArray2D<T>& operator/(const MyArray2D &rightArray2D) const {
+    MyArray2D<T>* result = new MyArray2D(rows, cols);
 		for (int countRow = 0; countRow < this->rows; countRow++) {
 			for (int countCol = 0; countCol < this->cols; countCol++) {
-					result->array2DPtr[countRow][countCol] = std::forward(this->array2DPtr[countRow][countCol]/rightArray2D.array2DPtr[countRow][countCol]);
+					result->array2DPtr[countRow][countCol] = this->array2DPtr[countRow][countCol]/rightArray2D.array2DPtr[countRow][countCol];
 			};
 		};
 		return *result;
 	};
 
-  MyArray2D& operator%(const MyArray2D &rightArray2D) const {
-    MyArray2D* result = new MyArray2D(rows, cols);
+  MyArray2D<T>& operator%(const MyArray2D &rightArray2D) const {
+    MyArray2D<T>* result = new MyArray2D(rows, cols);
 		for (int countRow = 0; countRow < this->rows; countRow++) {
 			for (int countCol = 0; countCol < this->cols; countCol++) {
-					result->array2DPtr[countRow][countCol] = std::forward(this->array2DPtr[countRow][countCol]%rightArray2D.array2DPtr[countRow][countCol]);
+					result->array2DPtr[countRow][countCol] = this->array2DPtr[countRow][countCol]%rightArray2D.array2DPtr[countRow][countCol];
 			};
 		};
 		return *result;
 	};
-/*
-	double* operator[] (int num) const {
-		return this->array2DPtr[num];
-	}
-
-	friend std::ostream &operator<<(std::ostream &out, const matrix& left);
-	matrix* operator=(const matrix *left) {
-		if (this == left) {
-			return this;
-		}
-		else {
-
-			this->cols = left->cols;
-			this->rows = left->rows;
-			for (int i = 0; i < cols; i++) {
-				for (int j = 0; j < rows; j++) {
-					this->someMatrixPtr[j][i] = left->someMatrixPtr[j][i];
-				};
-			};
-			return this;
-		}
-	};*/
 
   //element-by-element logical operations
-  MyArray2D& operator&&(const MyArray2D &rightArray2D) const {
-    MyArray2D* result = new MyArray2D(rows, cols);
+  MyArray2D<bool>& operator&&(const MyArray2D &rightArray2D) const {
+    MyArray2D<bool>* result = new MyArray2D(rows, cols);
 		for (int countRow = 0; countRow < this->rows; countRow++) {
 			for (int countCol = 0; countCol < this->cols; countCol++) {
-					result->array2DPtr[countRow][countCol] = std::forward(this->array2DPtr[countRow][countCol]&&rightArray2D.array2DPtr[countRow][countCol]);
+					result->array2DPtr[countRow][countCol] = this->array2DPtr[countRow][countCol]&&rightArray2D.array2DPtr[countRow][countCol];
 			};
 		};
 		return *result;
 	};
 
-  MyArray2D& operator||(const MyArray2D &rightArray2D) const {
-    MyArray2D* result = new MyArray2D(rows, cols);
+  MyArray2D<bool>& operator||(const MyArray2D &rightArray2D) const {
+    MyArray2D<bool>* result = new MyArray2D(rows, cols);
 		for (int countRow = 0; countRow < this->rows; countRow++) {
 			for (int countCol = 0; countCol < this->cols; countCol++) {
-					result->array2DPtr[countRow][countCol] = std::forward(this->array2DPtr[countRow][countCol]||rightArray2D.array2DPtr[countRow][countCol]);
+					result->array2DPtr[countRow][countCol] = this->array2DPtr[countRow][countCol]||rightArray2D.array2DPtr[countRow][countCol];
 			};
 		};
 		return *result;
 	};
 
-  MyArray2D& operator!(const MyArray2D &rightArray2D) const {
-    MyArray2D* result = new MyArray2D(rows, cols);
+  MyArray2D<bool>& operator!() const {
+    MyArray2D<bool>* result = new MyArray2D(rows, cols);
 		for (int countRow = 0; countRow < this->rows; countRow++) {
 			for (int countCol = 0; countCol < this->cols; countCol++) {
-					result->array2DPtr[countRow][countCol] = std::forward(!rightArray2D.array2DPtr[countRow][countCol]);
+					result->array2DPtr[countRow][countCol] = !this->array2DPtr[countRow][countCol];
 			};
 		};
 		return *result;
 	};
 
-  MyArray2D& operator^(const MyArray2D &rightArray2D) const {
-    MyArray2D* result = new MyArray2D(rows, cols);
+  MyArray2D<bool>& operator^(const MyArray2D &rightArray2D) const {
+    MyArray2D<bool>* result = new MyArray2D(rows, cols);
 		for (int countRow = 0; countRow < this->rows; countRow++) {
 			for (int countCol = 0; countCol < this->cols; countCol++) {
-					result->array2DPtr[countRow][countCol] = std::forward(this->array2DPtr[countRow][countCol]^rightArray2D.array2DPtr[countRow][countCol]);
+					result->array2DPtr[countRow][countCol] = this->array2DPtr[countRow][countCol]^rightArray2D.array2DPtr[countRow][countCol];
 			};
 		};
 		return *result;
+	};
+
+  //operator[]
+  T& operator[](int num)const{
+    return this->array2DPtr[num];
+  };
+
+  //operator() for [][]
+  T& operator()(int rowNum, int colNum) const {
+		return this->array2DPtr[rowNum][colNum];
 	};
 
 	~MyArray2D() {
@@ -183,20 +171,3 @@ public:
 			delete[] array2DPtr[count];
 	}
 };
-/*
-std::ostream &operator<<(std::ostream &out, const matrix& left) {
-	for (int countRow = 0; countRow < left.rows; countRow++) {
-		for (int countCol = 0; countCol < left.cols; countCol++) {
-			out << left.someMatrixPtr[countRow][countCol] << " ";
-		}
-		out << std::endl;
-	};
-	return out;
-}*/
-
-
-
-
-int main(){
-  return 0;
-}

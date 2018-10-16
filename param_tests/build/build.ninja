@@ -64,7 +64,15 @@ build src/param_tests/src@param_tests@@param_tests@exe/MyGuard.cc.o: cpp_COMPILE
  DEPFILE = src/param_tests/src@param_tests@@param_tests@exe/MyGuard.cc.o.d
  ARGS = -Isrc/param_tests/src@param_tests@@param_tests@exe -Isrc/param_tests -I../src/param_tests -Isrc -I../src -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++11 -g
 
-build src/param_tests/param_tests: cpp_LINKER src/param_tests/src@param_tests@@param_tests@exe/MyGuard.cc.o
+build src/param_tests/src@param_tests@@param_tests@exe/MyArray2D.cc.o: cpp_COMPILER ../src/param_tests/MyArray2D.cc
+ DEPFILE = src/param_tests/src@param_tests@@param_tests@exe/MyArray2D.cc.o.d
+ ARGS = -Isrc/param_tests/src@param_tests@@param_tests@exe -Isrc/param_tests -I../src/param_tests -Isrc -I../src -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++11 -g
+
+build src/param_tests/src@param_tests@@param_tests@exe/MyMaskedArray2D.cc.o: cpp_COMPILER ../src/param_tests/MyMaskedArray2D.cc
+ DEPFILE = src/param_tests/src@param_tests@@param_tests@exe/MyMaskedArray2D.cc.o.d
+ ARGS = -Isrc/param_tests/src@param_tests@@param_tests@exe -Isrc/param_tests -I../src/param_tests -Isrc -I../src -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++11 -g
+
+build src/param_tests/param_tests: cpp_LINKER src/param_tests/src@param_tests@@param_tests@exe/MyGuard.cc.o src/param_tests/src@param_tests@@param_tests@exe/MyArray2D.cc.o src/param_tests/src@param_tests@@param_tests@exe/MyMaskedArray2D.cc.o
  LINK_ARGS = -Wl,--no-undefined -Wl,--as-needed
 
 # Test rules
