@@ -1,3 +1,9 @@
+#pragma once
+#include <MyMaskedArray2D.cc>
+
+template <typename Z>
+class MyMaskedArray2D;
+
 template <typename T>
 class MyArray2D{
   T** array2DPtr;
@@ -50,7 +56,7 @@ public:
   //operator=
   MyArray2D& operator=(const MyArray2D &rightArray2D) {
 		if (this == rightArray2D) {
-			return *this;
+			return this;
 		}
 		else {
 			this->cols = rightArray2D.cols;
@@ -60,7 +66,7 @@ public:
 					this->array2DPtr[j][i] = rightArray2D.array2DPtr[j][i];
 				};
 			};
-			return *this;
+			return this;
 		}
 	}
 
@@ -72,7 +78,7 @@ public:
 					result->array2DPtr[countRow][countCol] = this->array2DPtr[countRow][countCol]*rightArray2D.array2DPtr[countRow][countCol];
 			};
 		};
-		return *result;
+		return result;
 	};
 
 	MyArray2D<T>& operator+(const MyArray2D &rightArray2D) const {
@@ -82,7 +88,7 @@ public:
 					result->array2DPtr[countRow][countCol] = this->array2DPtr[countRow][countCol]+rightArray2D.array2DPtr[countRow][countCol];
 			};
 		};
-		return *result;
+		return result;
 	};
 
 	MyArray2D<T>& operator-(const MyArray2D &rightArray2D) const {
@@ -92,7 +98,7 @@ public:
 					result->array2DPtr[countRow][countCol] = this->array2DPtr[countRow][countCol]-rightArray2D.array2DPtr[countRow][countCol];
 			};
 		};
-		return *result;
+		return result;
 	};
 
 	MyArray2D<T>& operator/(const MyArray2D &rightArray2D) const {
@@ -102,7 +108,7 @@ public:
 					result->array2DPtr[countRow][countCol] = this->array2DPtr[countRow][countCol]/rightArray2D.array2DPtr[countRow][countCol];
 			};
 		};
-		return *result;
+		return result;
 	};
 
   MyArray2D<T>& operator%(const MyArray2D &rightArray2D) const {
@@ -112,7 +118,7 @@ public:
 					result->array2DPtr[countRow][countCol] = this->array2DPtr[countRow][countCol]%rightArray2D.array2DPtr[countRow][countCol];
 			};
 		};
-		return *result;
+		return result;
 	};
 
   //element-by-element logical operations
@@ -123,7 +129,7 @@ public:
 					result->array2DPtr[countRow][countCol] = this->array2DPtr[countRow][countCol]&&rightArray2D.array2DPtr[countRow][countCol];
 			};
 		};
-		return *result;
+		return result;
 	};
 
   MyArray2D<bool>& operator||(const MyArray2D &rightArray2D) const {
@@ -133,7 +139,7 @@ public:
 					result->array2DPtr[countRow][countCol] = this->array2DPtr[countRow][countCol]||rightArray2D.array2DPtr[countRow][countCol];
 			};
 		};
-		return *result;
+		return result;
 	};
 
   MyArray2D<bool>& operator!() const {
@@ -143,7 +149,7 @@ public:
 					result->array2DPtr[countRow][countCol] = !this->array2DPtr[countRow][countCol];
 			};
 		};
-		return *result;
+		return result;
 	};
 
   MyArray2D<bool>& operator^(const MyArray2D &rightArray2D) const {
@@ -153,7 +159,7 @@ public:
 					result->array2DPtr[countRow][countCol] = this->array2DPtr[countRow][countCol]^rightArray2D.array2DPtr[countRow][countCol];
 			};
 		};
-		return *result;
+		return result;
 	};
 
   //operator[]
@@ -165,6 +171,13 @@ public:
   T& operator()(int rowNum, int colNum) const {
 		return this->array2DPtr[rowNum][colNum];
 	};
+
+  MyMaskedArray2D<T>& operator()(const MyArray2D<bool>& mask){
+    MyMaskedArray2D<T>* maskedArray= new MyMaskedArray2D<T>;
+    maskedArray->array2DPtr=this;
+    maskedArray->maskPtr=&mask;
+    return maskedArray;
+  }
 
 	~MyArray2D() {
 		for (int count = 0; count < rows; count++)

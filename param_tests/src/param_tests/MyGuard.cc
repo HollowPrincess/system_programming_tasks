@@ -21,3 +21,6 @@ class MyGuard
     MyGuard(const MyGuard&) = delete;
     MyGuard& operator=(const MyGuard&) = delete;
 };
+int main(){
+  return 0;
+}
