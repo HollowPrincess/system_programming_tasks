@@ -1,10 +1,10 @@
-param_test_src = files([
- 'main.cc'
+param_tests_src = files([
+ 'MyGuard.cc'
 ])
 executable(
- 'param_test',
+ 'param_tests',
  include_directories: src,
- sources: param_test_src,
+ sources: param_tests_src,
  dependences: [],
  install: true
 )

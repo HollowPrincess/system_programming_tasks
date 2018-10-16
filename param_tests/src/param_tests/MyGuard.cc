@@ -18,6 +18,8 @@ class MyGuard
         out.flags(sourceFlags);
         out.fill(sourceFill);
     }
+    MyGuard(const MyGuard&) = delete;
+    MyGuard& operator=(const MyGuard&) = delete;
 };
 
 int main()
