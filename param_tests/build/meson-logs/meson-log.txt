@@ -1,4 +1,4 @@
-Build started at 2018-10-17T10:55:09.061183
+Build started at 2018-10-17T15:03:58.838030
 Main binary: /usr/bin/python3
 Python system: Linux
 The Meson build system
@@ -13,11 +13,37 @@ Build machine cpu family: x86_64
 Build machine cpu: x86_64
 src/param_tests/meson.build:6: WARNING: Passed invalid keyword argument "dependences".
 WARNING: This will become a hard error in the future.
-Build targets in project: 1
+Found pkg-config: /usr/bin/pkg-config (0.29.1)
+Determining dependency 'gtest_main' with pkg-config executable '/usr/bin/pkg-config'
+Called `/usr/bin/pkg-config --modversion gtest_main` -> 1
+
+Running compile:
+Working directory:  /tmp/tmpnu03cpo9
+Command line:  c++ /tmp/tmpnu03cpo9/testfile.cpp -pipe -D_FILE_OFFSET_BITS=64 -o /tmp/tmpnu03cpo9/output.exe -O0 -fpermissive -Wl,--start-group -lgtest -Wl,--end-group -Wl,--allow-shlib-undefined 
+
+Code:
+ int main(int argc, char **argv) { return 0; }
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Running compile:
+Working directory:  /tmp/tmpdqiatjtt
+Command line:  c++ /tmp/tmpdqiatjtt/testfile.cpp -pipe -D_FILE_OFFSET_BITS=64 -o /tmp/tmpdqiatjtt/output.exe -O0 -fpermissive -Wl,--start-group -lgtest_main -Wl,--end-group -Wl,--allow-shlib-undefined 
+
+Code:
+ int main(int argc, char **argv) { return 0; }
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Dependency GTest found: YES (prebuilt)
+Adding test "MyArray2D.cc"
+Build targets in project: 2
 Found ninja-1.8.2 at /usr/bin/ninja
 Running compile:
-Working directory:  /tmp/tmp08_pimkd
-Command line:  c++ /tmp/tmp08_pimkd/testfile.cpp -pipe -D_FILE_OFFSET_BITS=64 -c -o /tmp/tmp08_pimkd/output.obj -std=c++11 
+Working directory:  /tmp/tmpqscawl1p
+Command line:  c++ /tmp/tmpqscawl1p/testfile.cpp -pipe -D_FILE_OFFSET_BITS=64 -c -o /tmp/tmpqscawl1p/output.obj -std=c++11 
 
 Code:
  int i = static_cast<int>(0);
@@ -27,8 +53,8 @@ Compiler stderr:
  
 Compiler accepts -std=c++11: YES
 Running compile:
-Working directory:  /tmp/tmp7cc4grzg
-Command line:  c++ /tmp/tmp7cc4grzg/testfile.cpp -pipe -D_FILE_OFFSET_BITS=64 -c -o /tmp/tmp7cc4grzg/output.obj -O0 -fpermissive --print-search-dirs 
+Working directory:  /tmp/tmpwdmsxfkf
+Command line:  c++ /tmp/tmpwdmsxfkf/testfile.cpp -pipe -D_FILE_OFFSET_BITS=64 -c -o /tmp/tmpwdmsxfkf/output.obj -O0 -fpermissive --print-search-dirs 
 
 Code:
  

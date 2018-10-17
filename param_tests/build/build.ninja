@@ -75,6 +75,13 @@ build src/param_tests/src@param_tests@@param_tests@exe/MyMaskedArray2D.cc.o: cpp
 build src/param_tests/param_tests: cpp_LINKER src/param_tests/src@param_tests@@param_tests@exe/MyGuard.cc.o src/param_tests/src@param_tests@@param_tests@exe/MyArray2D.cc.o src/param_tests/src@param_tests@@param_tests@exe/MyMaskedArray2D.cc.o
  LINK_ARGS = -fsanitize=address -Wl,--no-undefined -Wl,--as-needed
 
+build src/tests/src@tests@@array2D_test@exe/array2D_test.cc.o: cpp_COMPILER ../src/tests/array2D_test.cc
+ DEPFILE = src/tests/src@tests@@array2D_test@exe/array2D_test.cc.o.d
+ ARGS = -Isrc/tests/src@tests@@array2D_test@exe -Isrc/tests -I../src/tests -Isrc -I../src -fdiagnostics-color=always -fsanitize=address -fno-omit-frame-pointer -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++11 -g -pthread
+
+build src/tests/array2D_test: cpp_LINKER src/tests/src@tests@@array2D_test@exe/array2D_test.cc.o | /usr/lib/libgtest.a /usr/lib/libgtest_main.a
+ LINK_ARGS = -fsanitize=address -Wl,--no-undefined -Wl,--as-needed -Wl,--start-group -lgtest -lgtest_main -Wl,--end-group -pthread
+
 # Test rules
 
 build meson-test: CUSTOM_COMMAND all PHONY
@@ -121,7 +128,7 @@ build meson-uninstall: CUSTOM_COMMAND PHONY
 
 build uninstall: phony meson-uninstall
 
-build all: phony src/param_tests/param_tests
+build all: phony src/param_tests/param_tests src/tests/array2D_test
 
 default all
 
@@ -131,11 +138,11 @@ build meson-clean: CUSTOM_COMMAND PHONY
  COMMAND = ninja -t clean
  description = Cleaning.
 
-build build.ninja: REGENERATE_BUILD ../meson.build ../src/meson.build ../src/param_tests/meson.build meson-private/coredata.dat
+build build.ninja: REGENERATE_BUILD ../meson.build ../src/meson.build ../src/param_tests/meson.build ../src/tests/meson.build meson-private/coredata.dat
  pool = console
 
 build reconfigure: REGENERATE_BUILD PHONY
  pool = console
 
-build ../meson.build ../src/meson.build ../src/param_tests/meson.build meson-private/coredata.dat: phony 
+build ../meson.build ../src/meson.build ../src/param_tests/meson.build ../src/tests/meson.build meson-private/coredata.dat: phony 
 
