@@ -28,8 +28,7 @@ INSTANTIATE_TEST_CASE_P(
 
 TEST_P(array2D_test, sum_operator_test) {
   const array2D_param_for_arithmetical_operators &param = GetParam();
-  MyArray2D<double> result;
-  result = param.inputLeft + param.inputRight;
+  MyArray2D<double> result = param.inputLeft + param.inputRight;
 
   EXPECT_EQ(param.output(0, 0), result(0, 0));
   EXPECT_EQ(param.output(0, 1), result(0, 1));

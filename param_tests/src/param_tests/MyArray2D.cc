@@ -17,39 +17,54 @@ public:
 
   // constructor
   MyArray2D(int row, int col, T *arrayOfNums) : rows(row), cols(col) {
-    double **array2D = new double *[row];
+    array2DPtr = new double *[row];
     int counter = 0;
     for (int i = 0; i < row; i++) {
-      array2D[i] = new double[col];
+      array2DPtr[i] = new double[col];
     };
     for (int countRow = 0; countRow < row; countRow++) {
       for (int countCol = 0; countCol < col; countCol++) {
-        array2D[countRow][countCol] = arrayOfNums[counter];
+        array2DPtr[countRow][countCol] = arrayOfNums[counter];
         counter++;
       }
     };
-    array2DPtr = array2D;
   }
 
   MyArray2D(int row, int col) : rows(row), cols(col) {
-    double **array2D = new double *[row];
-    array2DPtr = array2D;
+    array2DPtr = new double *[row];
+    for (int i = 0; i < row; i++) {
+      array2DPtr[i] = new double[col];
+    };
   }
 
   // copy constructor
   MyArray2D(const MyArray2D &existedArray2D)
       : rows(existedArray2D.rows), cols(existedArray2D.cols) {
-    double **array2D = new double *[existedArray2D.rows];
+    array2DPtr = new double *[existedArray2D.rows];
     for (int i = 0; i < existedArray2D.rows; i++) {
-      array2D[i] = new double[existedArray2D.cols];
+      array2DPtr[i] = new double[existedArray2D.cols];
     };
     for (int countRow = 0; countRow < existedArray2D.rows; countRow++) {
       for (int countCol = 0; countCol < existedArray2D.cols; countCol++) {
-        array2D[countRow][countCol] =
+        array2DPtr[countRow][countCol] =
             existedArray2D.array2DPtr[countRow][countCol];
       }
     };
-    array2DPtr = array2D;
+  }
+
+  // swap
+  void swap(MyArray2D &rightArray2D) {
+    T **tmpArray2DPtr = array2DPtr;
+    int tmpRows = rows;
+    int tmpCols = cols;
+
+    array2DPtr = rightArray2D.array2DPtr;
+    rows = rightArray2D.rows;
+    cols = rightArray2D.cols;
+
+    rightArray2D.array2DPtr = tmpArray2DPtr;
+    rightArray2D.rows = tmpRows;
+    rightArray2D.cols = tmpCols;
   }
 
   // operator=
@@ -57,15 +72,28 @@ public:
     if (this == &rightArray2D) {
       return *this;
     } else {
+      for (int count = 0; count < rows; count++)
+        delete[] array2DPtr[count];
+      delete[] array2DPtr;
+
       this->cols = rightArray2D.cols;
       this->rows = rightArray2D.rows;
-      for (int i = 0; i < cols; i++) {
-        for (int j = 0; j < rows; j++) {
-          this->array2DPtr[j][i] = rightArray2D.array2DPtr[j][i];
-        };
-      };
+      MyArray2D<T> tmp(rightArray2D);
+      this->swap(tmp);
       return *this;
-    }
+    };
+  }
+
+  MyArray2D operator=(const MyArray2D rightArray2D) {
+    for (int count = 0; count < rows; count++)
+      delete[] array2DPtr[count];
+    delete[] array2DPtr;
+
+    this->cols = rightArray2D.cols;
+    this->rows = rightArray2D.rows;
+    MyArray2D<T> tmp(rightArray2D);
+    this->swap(tmp);
+    return *this;
   }
 
   // element-by-element arithmetic operations
@@ -74,7 +102,7 @@ public:
       MyArray2D<T> result(rows, cols);
       for (int countRow = 0; countRow < this->rows; countRow++) {
         for (int countCol = 0; countCol < this->cols; countCol++) {
-          result->array2DPtr[countRow][countCol] =
+          result.array2DPtr[countRow][countCol] =
               this->array2DPtr[countRow][countCol] *
               rightArray2D.array2DPtr[countRow][countCol];
         };
@@ -108,7 +136,7 @@ public:
       MyArray2D<T> result(rows, cols);
       for (int countRow = 0; countRow < this->rows; countRow++) {
         for (int countCol = 0; countCol < this->cols; countCol++) {
-          result->array2DPtr[countRow][countCol] =
+          result.array2DPtr[countRow][countCol] =
               this->array2DPtr[countRow][countCol] -
               rightArray2D.array2DPtr[countRow][countCol];
         };
@@ -125,7 +153,7 @@ public:
       MyArray2D<T> result(rows, cols);
       for (int countRow = 0; countRow < this->rows; countRow++) {
         for (int countCol = 0; countCol < this->cols; countCol++) {
-          result->array2DPtr[countRow][countCol] =
+          result.array2DPtr[countRow][countCol] =
               this->array2DPtr[countRow][countCol] /
               rightArray2D.array2DPtr[countRow][countCol];
         };
@@ -142,7 +170,7 @@ public:
       MyArray2D<T> result;
       for (int countRow = 0; countRow < this->rows; countRow++) {
         for (int countCol = 0; countCol < this->cols; countCol++) {
-          result->array2DPtr[countRow][countCol] =
+          result.array2DPtr[countRow][countCol] =
               this->array2DPtr[countRow][countCol] %
               rightArray2D.array2DPtr[countRow][countCol];
         };
@@ -160,7 +188,7 @@ public:
       MyArray2D<bool> result(rows, cols);
       for (int countRow = 0; countRow < this->rows; countRow++) {
         for (int countCol = 0; countCol < this->cols; countCol++) {
-          result->array2DPtr[countRow][countCol] =
+          result.array2DPtr[countRow][countCol] =
               this->array2DPtr[countRow][countCol] &&
               rightArray2D.array2DPtr[countRow][countCol];
         };
@@ -177,7 +205,7 @@ public:
       MyArray2D<bool> result(rows, cols);
       for (int countRow = 0; countRow < this->rows; countRow++) {
         for (int countCol = 0; countCol < this->cols; countCol++) {
-          result->array2DPtr[countRow][countCol] =
+          result.array2DPtr[countRow][countCol] =
               this->array2DPtr[countRow][countCol] ||
               rightArray2D.array2DPtr[countRow][countCol];
         };
@@ -194,7 +222,7 @@ public:
       MyArray2D<bool> result(rows, cols);
       for (int countRow = 0; countRow < this->rows; countRow++) {
         for (int countCol = 0; countCol < this->cols; countCol++) {
-          result->array2DPtr[countRow][countCol] =
+          result.array2DPtr[countRow][countCol] =
               !this->array2DPtr[countRow][countCol];
         };
       };
@@ -210,7 +238,7 @@ public:
       MyArray2D<bool> result(rows, cols);
       for (int countRow = 0; countRow < this->rows; countRow++) {
         for (int countCol = 0; countCol < this->cols; countCol++) {
-          result->array2DPtr[countRow][countCol] =
+          result.array2DPtr[countRow][countCol] =
               this->array2DPtr[countRow][countCol] ^
               rightArray2D.array2DPtr[countRow][countCol];
         };
@@ -253,5 +281,6 @@ public:
   ~MyArray2D() {
     for (int count = 0; count < rows; count++)
       delete[] array2DPtr[count];
+    delete[] array2DPtr;
   };
 };
