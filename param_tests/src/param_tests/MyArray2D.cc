@@ -163,14 +163,15 @@ public:
 	};
 
   //operator[]
-  T& operator[](int num)const{
+  T& operator[](int& num)const{
     return this->array2DPtr[num];
   };
 
   //operator() for [][]
-  T& operator()(int rowNum, int colNum) const {
+  T& operator()(int& rowNum, int& colNum) {
 		return this->array2DPtr[rowNum][colNum];
 	};
+
 
   MyMaskedArray2D<T>& operator()(const MyArray2D<bool>& mask){
     MyMaskedArray2D<T>* maskedArray= new MyMaskedArray2D<T>;
