@@ -17,10 +17,10 @@ public:
 
   // constructor
   MyArray2D(int row, int col, T *arrayOfNums) : rows(row), cols(col) {
-    array2DPtr = new double *[row];
+    array2DPtr = new T *[row];
     int counter = 0;
     for (int i = 0; i < row; i++) {
-      array2DPtr[i] = new double[col];
+      array2DPtr[i] = new T[col];
     };
     for (int countRow = 0; countRow < row; countRow++) {
       for (int countCol = 0; countCol < col; countCol++) {
@@ -31,18 +31,18 @@ public:
   }
 
   MyArray2D(int row, int col) : rows(row), cols(col) {
-    array2DPtr = new double *[row];
+    array2DPtr = new T *[row];
     for (int i = 0; i < row; i++) {
-      array2DPtr[i] = new double[col];
+      array2DPtr[i] = new T[col];
     };
   }
 
   // copy constructor
   MyArray2D(const MyArray2D &existedArray2D)
       : rows(existedArray2D.rows), cols(existedArray2D.cols) {
-    array2DPtr = new double *[existedArray2D.rows];
+    array2DPtr = new T *[existedArray2D.rows];
     for (int i = 0; i < existedArray2D.rows; i++) {
-      array2DPtr[i] = new double[existedArray2D.cols];
+      array2DPtr[i] = new T[existedArray2D.cols];
     };
     for (int countRow = 0; countRow < existedArray2D.rows; countRow++) {
       for (int countCol = 0; countCol < existedArray2D.cols; countCol++) {
@@ -95,6 +95,9 @@ public:
     this->swap(tmp);
     return *this;
   }
+
+  int getNumOfRows() { return this->rows; };
+  int getNumOfCols() { return this->cols; };
 
   // element-by-element arithmetic operations
   MyArray2D<T> operator*(const MyArray2D &rightArray2D) const {
@@ -167,7 +170,7 @@ public:
 
   MyArray2D<T> operator%(const MyArray2D &rightArray2D) const {
     if ((rows == rightArray2D.rows) && (cols == rightArray2D.cols)) {
-      MyArray2D<T> result;
+      MyArray2D<T> result(rows, cols);
       for (int countRow = 0; countRow < this->rows; countRow++) {
         for (int countCol = 0; countCol < this->cols; countCol++) {
           result.array2DPtr[countRow][countCol] =
