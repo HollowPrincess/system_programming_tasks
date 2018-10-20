@@ -13,6 +13,7 @@ public:
   MyArray2D() {
     rows = 0;
     cols = 0;
+    array2DPtr = nullptr;
   };
 
   // constructor
@@ -281,7 +282,7 @@ public:
     return maskedArray;
   };
 
-  ~MyArray2D() {
+  ~MyArray2D<T>() {
     for (int count = 0; count < rows; count++)
       delete[] array2DPtr[count];
     delete[] array2DPtr;
