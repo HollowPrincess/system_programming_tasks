@@ -187,7 +187,7 @@ public:
   };
 
   // element-by-element logical operations
-  MyArray2D<bool> operator&&(const MyArray2D &rightArray2D) const {
+  MyArray2D<bool> operator&&(const MyArray2D<bool> &rightArray2D) const {
     if ((rows == rightArray2D.rows) && (cols == rightArray2D.cols)) {
       MyArray2D<bool> result(rows, cols);
       for (int countRow = 0; countRow < this->rows; countRow++) {
@@ -204,7 +204,7 @@ public:
     };
   };
 
-  MyArray2D<bool> operator||(const MyArray2D &rightArray2D) const {
+  MyArray2D<bool> operator||(const MyArray2D<bool> &rightArray2D) const {
     if ((rows == rightArray2D.rows) && (cols == rightArray2D.cols)) {
       MyArray2D<bool> result(rows, cols);
       for (int countRow = 0; countRow < this->rows; countRow++) {
@@ -228,23 +228,6 @@ public:
         for (int countCol = 0; countCol < this->cols; countCol++) {
           result.array2DPtr[countRow][countCol] =
               !this->array2DPtr[countRow][countCol];
-        };
-      };
-      return result;
-    } else {
-      MyArray2D<bool> error;
-      return error;
-    };
-  };
-
-  MyArray2D<bool> operator^(const MyArray2D &rightArray2D) const {
-    if ((rows == rightArray2D.rows) && (cols == rightArray2D.cols)) {
-      MyArray2D<bool> result(rows, cols);
-      for (int countRow = 0; countRow < this->rows; countRow++) {
-        for (int countCol = 0; countCol < this->cols; countCol++) {
-          result.array2DPtr[countRow][countCol] =
-              this->array2DPtr[countRow][countCol] ^
-              rightArray2D.array2DPtr[countRow][countCol];
         };
       };
       return result;
