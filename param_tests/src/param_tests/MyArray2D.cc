@@ -1,5 +1,6 @@
 #pragma once
 #include <../param_tests/MyMaskedArray2D.cc>
+#include <cstdlib>
 
 template <typename Z> class MyMaskedArray2D;
 
@@ -249,20 +250,17 @@ public:
       return *error;
     };
   };
-  T &operator()(int rowNum, int colNum) const {
-    if ((this->rows > rowNum) && (this->cols > colNum)) {
-      return this->array2DPtr[rowNum][colNum];
-    } else {
-      T *error = new T;
-      return *error;
-    };
-  };
 
-  MyMaskedArray2D<T> &operator()(const MyArray2D<bool> &mask) {
-    MyMaskedArray2D<T> *maskedArray = new MyMaskedArray2D<T>;
-    maskedArray->array2DPtr = this;
-    maskedArray->maskPtr = &mask;
-    return maskedArray;
+  MyMaskedArray2D<T> &operator()(MyArray2D<bool> &mask) {
+    if ((this->rows == mask.getNumOfRows()) &&
+        (this->cols == mask.getNumOfCols())) {
+      MyMaskedArray2D<T> *maskedArray = new MyMaskedArray2D<T>;
+      maskedArray->array2DPtr = this;
+      maskedArray->maskPtr = &mask;
+      return *maskedArray;
+    } else {
+      exit(0);
+    };
   };
 
   ~MyArray2D<T>() {

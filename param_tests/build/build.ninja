@@ -75,11 +75,15 @@ build src/param_tests/src@param_tests@@param_tests@exe/MyMaskedArray2D.cc.o: cpp
 build src/param_tests/param_tests: cpp_LINKER src/param_tests/src@param_tests@@param_tests@exe/MyGuard.cc.o src/param_tests/src@param_tests@@param_tests@exe/MyArray2D.cc.o src/param_tests/src@param_tests@@param_tests@exe/MyMaskedArray2D.cc.o
  LINK_ARGS = -fsanitize=address -Wl,--no-undefined -Wl,--as-needed
 
-build src/tests/src@tests@@array2D_test@exe/array2D_test.cc.o: cpp_COMPILER ../src/tests/array2D_test.cc
- DEPFILE = src/tests/src@tests@@array2D_test@exe/array2D_test.cc.o.d
- ARGS = -Isrc/tests/src@tests@@array2D_test@exe -Isrc/tests -I../src/tests -Isrc -I../src -fdiagnostics-color=always -fsanitize=address -fno-omit-frame-pointer -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++11 -g -pthread
+build src/tests/src@tests@@array2D_test.cc@exe/mask_test.cc.o: cpp_COMPILER ../src/tests/mask_test.cc
+ DEPFILE = src/tests/src@tests@@array2D_test.cc@exe/mask_test.cc.o.d
+ ARGS = -Isrc/tests/src@tests@@array2D_test.cc@exe -Isrc/tests -I../src/tests -Isrc -I../src -fdiagnostics-color=always -fsanitize=address -fno-omit-frame-pointer -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++11 -g -pthread
 
-build src/tests/array2D_test: cpp_LINKER src/tests/src@tests@@array2D_test@exe/array2D_test.cc.o | /usr/lib/libgtest.a /usr/lib/libgtest_main.a
+build src/tests/src@tests@@array2D_test.cc@exe/array2D_test.cc.o: cpp_COMPILER ../src/tests/array2D_test.cc
+ DEPFILE = src/tests/src@tests@@array2D_test.cc@exe/array2D_test.cc.o.d
+ ARGS = -Isrc/tests/src@tests@@array2D_test.cc@exe -Isrc/tests -I../src/tests -Isrc -I../src -fdiagnostics-color=always -fsanitize=address -fno-omit-frame-pointer -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++11 -g -pthread
+
+build src/tests/array2D_test.cc: cpp_LINKER src/tests/src@tests@@array2D_test.cc@exe/mask_test.cc.o src/tests/src@tests@@array2D_test.cc@exe/array2D_test.cc.o | /usr/lib/libgtest.a /usr/lib/libgtest_main.a
  LINK_ARGS = -fsanitize=address -Wl,--no-undefined -Wl,--as-needed -Wl,--start-group -lgtest -lgtest_main -Wl,--end-group -pthread
 
 # Test rules
@@ -128,7 +132,7 @@ build meson-uninstall: CUSTOM_COMMAND PHONY
 
 build uninstall: phony meson-uninstall
 
-build all: phony src/param_tests/param_tests src/tests/array2D_test
+build all: phony src/param_tests/param_tests src/tests/array2D_test.cc
 
 default all
 
