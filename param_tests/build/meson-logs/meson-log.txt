@@ -1,4 +1,4 @@
-Build started at 2018-10-21T14:25:17.197883
+Build started at 2018-10-22T13:12:46.485116
 Main binary: /usr/bin/python3
 Python system: Linux
 The Meson build system
@@ -18,8 +18,8 @@ Adding test "MyArray2D.cc"
 Build targets in project: 2
 Found ninja-1.8.2 at /usr/bin/ninja
 Running compile:
-Working directory:  /tmp/tmp2rqpyy1q
-Command line:  c++ /tmp/tmp2rqpyy1q/testfile.cpp -pipe -D_FILE_OFFSET_BITS=64 -c -o /tmp/tmp2rqpyy1q/output.obj -std=c++11 
+Working directory:  /tmp/tmp44k90r3u
+Command line:  c++ /tmp/tmp44k90r3u/testfile.cpp -pipe -D_FILE_OFFSET_BITS=64 -c -o /tmp/tmp44k90r3u/output.obj -std=c++11 
 
 Code:
  int i = static_cast<int>(0);
@@ -29,8 +29,8 @@ Compiler stderr:
  
 Compiler accepts -std=c++11: YES
 Running compile:
-Working directory:  /tmp/tmpmhov_gd1
-Command line:  c++ /tmp/tmpmhov_gd1/testfile.cpp -pipe -D_FILE_OFFSET_BITS=64 -c -o /tmp/tmpmhov_gd1/output.obj -O0 -fpermissive --print-search-dirs 
+Working directory:  /tmp/tmp7ci2cfm4
+Command line:  c++ /tmp/tmp7ci2cfm4/testfile.cpp -pipe -D_FILE_OFFSET_BITS=64 -c -o /tmp/tmp7ci2cfm4/output.obj -O0 -fpermissive --print-search-dirs 
 
 Code:
  

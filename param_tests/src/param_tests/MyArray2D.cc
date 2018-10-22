@@ -1,6 +1,7 @@
 #pragma once
 #include <../param_tests/MyMaskedArray2D.cc>
 #include <cstdlib>
+#include <iostream>
 
 template <typename Z> class MyMaskedArray2D;
 
@@ -251,21 +252,24 @@ public:
     };
   };
 
-  MyMaskedArray2D<T> &operator()(MyArray2D<bool> &mask) {
+  MyMaskedArray2D<T> operator()(MyArray2D<bool> &mask) {
     if ((this->rows == mask.getNumOfRows()) &&
         (this->cols == mask.getNumOfCols())) {
-      MyMaskedArray2D<T> *maskedArray = new MyMaskedArray2D<T>;
-      maskedArray->array2DPtr = this;
-      maskedArray->maskPtr = &mask;
-      return *maskedArray;
+      MyMaskedArray2D<T> maskedArray(this, &mask);
+      // maskedArray->array2DPtr = this;
+      // maskedArray->maskPtr = &mask;
+      return maskedArray;
     } else {
+      std::cerr << "Error: array dimensions don't match\n";
       exit(0);
     };
   };
 
   ~MyArray2D<T>() {
-    for (int count = 0; count < rows; count++)
-      delete[] array2DPtr[count];
-    delete[] array2DPtr;
+    if (array2DPtr != nullptr) {
+      for (int count = 0; count < rows; count++)
+        delete[] array2DPtr[count];
+      delete[] array2DPtr;
+    };
   };
 };

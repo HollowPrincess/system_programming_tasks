@@ -9,14 +9,14 @@ struct array2D_param_for_arithmetical_operators {
 };
 
 struct array2D_param_for_logical_operators {
-  MyArray2D<bool> inputLeft;
-  MyArray2D<bool> inputRight;
-  bool *output;
+  MyArray2D<bool> inputLeftBool;
+  MyArray2D<bool> inputRightBool;
+  bool *outputBool;
 };
 
 struct array2D_param_for_NOT_operator {
-  MyArray2D<bool> inputRight;
-  bool *output;
+  MyArray2D<bool> inputRightNot;
+  bool *outputNot;
 };
 
 double arrayLeft[4] = {0.1, 0, -0.3, -1};
@@ -137,16 +137,16 @@ TEST(array2D_test_error, division_operator_test) {
 
 // operator %
 TEST_P(array2D_test_mod, mod_operator_test) {
-  int arrayLeft[4] = {1, 0, 3, -6};
-  int arrayRight[4] = {1, 1, 2, 4};
-  int arrayAnswer[4] = {1 % 1, 0 % 1, 3 % 2, -6 % 4};
+  int arrayLeftLocal[4] = {1, 0, 3, -6};
+  int arrayRightLocal[4] = {1, 1, 2, 4};
+  int arrayAnswerLocal[4] = {1 % 1, 0 % 1, 3 % 2, -6 % 4};
 
-  MyArray2D<int> left{2, 2, arrayLeft};
-  MyArray2D<int> right{2, 2, arrayRight};
+  MyArray2D<int> leftLocal{2, 2, arrayLeftLocal};
+  MyArray2D<int> rightLocal{2, 2, arrayRightLocal};
 
-  MyArray2D<int> result = left % right;
+  MyArray2D<int> result = leftLocal % rightLocal;
 
-  equivalence_test(result, arrayAnswer);
+  equivalence_test(result, arrayAnswerLocal);
 }
 INSTANTIATE_TEST_CASE_P(
     _, array2D_test_mod,
@@ -154,13 +154,13 @@ INSTANTIATE_TEST_CASE_P(
         left, inputRightTrueSize, arrayMod}));
 
 TEST(array2D_test_error, mod_operator_test) {
-  int arrayLeft[4] = {1, 0, 3, -6};
-  int arrayRight[4] = {1, 1};
+  int arrayLeftLocal[4] = {1, 0, 3, -6};
+  int arrayRightLocal[4] = {1, 1};
 
-  MyArray2D<int> left{2, 2, arrayLeft};
-  MyArray2D<int> right{2, 1, arrayRight};
+  MyArray2D<int> leftLocal{2, 2, arrayLeftLocal};
+  MyArray2D<int> rightLocal{2, 1, arrayRightLocal};
 
-  MyArray2D<int> result = left % right;
+  MyArray2D<int> result = leftLocal % rightLocal;
   EXPECT_EQ(result.getNumOfCols() + result.getNumOfRows(), 0);
 }
 
@@ -178,9 +178,9 @@ bool arrayNOT[4] = {1, 0, 1, 0};
 // operator &&
 TEST_P(array2D_test_AND, AND_operator_test) {
   const array2D_param_for_logical_operators &param = GetParam();
-  MyArray2D<bool> result = param.inputLeft && param.inputRight;
+  MyArray2D<bool> result = param.inputLeftBool && param.inputRightBool;
 
-  equivalence_test(result, param.output);
+  equivalence_test(result, param.outputBool);
 }
 INSTANTIATE_TEST_CASE_P(_, array2D_test_AND,
                         ::testing::Values(array2D_param_for_logical_operators{
@@ -194,9 +194,9 @@ TEST(array2D_test_error, AND_operator_test) {
 // operator ||
 TEST_P(array2D_test_OR, OR_operator_test) {
   const array2D_param_for_logical_operators &param = GetParam();
-  MyArray2D<bool> result = param.inputLeft || param.inputRight;
+  MyArray2D<bool> result = param.inputLeftBool || param.inputRightBool;
 
-  equivalence_test(result, param.output);
+  equivalence_test(result, param.outputBool);
 }
 INSTANTIATE_TEST_CASE_P(_, array2D_test_OR,
                         ::testing::Values(array2D_param_for_logical_operators{
@@ -210,9 +210,9 @@ TEST(array2D_test_error, OR_operator_test) {
 // operator !
 TEST_P(array2D_test_NOT, NOT_operator_test) {
   const array2D_param_for_NOT_operator &param = GetParam();
-  MyArray2D<bool> result = !param.inputRight;
+  MyArray2D<bool> result = !param.inputRightNot;
 
-  equivalence_test(result, param.output);
+  equivalence_test(result, param.outputNot);
 }
 INSTANTIATE_TEST_CASE_P(_, array2D_test_NOT,
                         ::testing::Values(array2D_param_for_NOT_operator{
