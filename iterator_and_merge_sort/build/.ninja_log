@@ -1,0 +1,18 @@
+# ninja log v5
+0	748	1540401619	src/iterator_and_merge_sort/src@iterator_and_merge_sort@@iterator_and_merge_sort@exe/my_ostream_iterator.cc.o	62532f65c9be9a46
+749	842	1540401619	src/iterator_and_merge_sort/iterator_and_merge_sort	18be322f0147d806
+2	741	1540401684	src/iterator_and_merge_sort/src@iterator_and_merge_sort@@iterator_and_merge_sort@exe/my_ostream_iterator.cc.o	62532f65c9be9a46
+741	830	1540401684	src/iterator_and_merge_sort/iterator_and_merge_sort	18be322f0147d806
+2	733	1540402052	src/iterator_and_merge_sort/src@iterator_and_merge_sort@@iterator_and_merge_sort@exe/my_ostream_iterator.cc.o	62532f65c9be9a46
+733	826	1540402052	src/iterator_and_merge_sort/iterator_and_merge_sort	18be322f0147d806
+1	1064	1540402206	src/iterator_and_merge_sort/src@iterator_and_merge_sort@@iterator_and_merge_sort@exe/my_ostream_iterator.cc.o	62532f65c9be9a46
+1064	1168	1540402206	src/iterator_and_merge_sort/iterator_and_merge_sort	18be322f0147d806
+2	1103	1540402532	src/iterator_and_merge_sort/src@iterator_and_merge_sort@@iterator_and_merge_sort@exe/my_ostream_iterator.cc.o	62532f65c9be9a46
+1103	1381	1540402532	src/iterator_and_merge_sort/iterator_and_merge_sort	18be322f0147d806
+2	1029	1540402673	src/iterator_and_merge_sort/src@iterator_and_merge_sort@@iterator_and_merge_sort@exe/my_ostream_iterator.cc.o	62532f65c9be9a46
+1029	1236	1540402674	src/iterator_and_merge_sort/iterator_and_merge_sort	18be322f0147d806
+2	950	1540402753	src/iterator_and_merge_sort/src@iterator_and_merge_sort@@iterator_and_merge_sort@exe/my_ostream_iterator.cc.o	62532f65c9be9a46
+950	1162	1540402753	src/iterator_and_merge_sort/iterator_and_merge_sort	18be322f0147d806
+0	897	1540402909	build.ninja	3e9d5f906aaab2c
+1	1071	1540402910	src/iterator_and_merge_sort/src@iterator_and_merge_sort@@iterator_and_merge_sort@exe/my_ostream_iterator.cc.o	49ee19ec2b59a339
+1071	1437	1540402910	src/iterator_and_merge_sort/iterator_and_merge_sort	58b9648a9247f7bc
