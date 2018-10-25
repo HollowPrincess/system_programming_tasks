@@ -1,4 +1,4 @@
-Build started at 2018-10-24T20:41:48.823700
+Build started at 2018-10-25T20:41:29.747958
 Main binary: /usr/bin/python3
 Python system: Linux
 The Meson build system
@@ -11,13 +11,15 @@ Project version: 0.1.0
 Native C++ compiler: c++ (gcc 7.3.0 "c++ (Ubuntu 7.3.0-27ubuntu1~18.04) 7.3.0")
 Build machine cpu family: x86_64
 Build machine cpu: x86_64
-src/iterator_and_merge_sort/meson.build:4: WARNING: Passed invalid keyword argument "dependences".
+src/iterator_and_merge_sort/meson.build:5: WARNING: Passed invalid keyword argument "dependences".
 WARNING: This will become a hard error in the future.
-Build targets in project: 1
+Dependency gtest found: YES (cached)
+Adding test "merge_sort.cc"
+Build targets in project: 2
 Found ninja-1.8.2 at /usr/bin/ninja
 Running compile:
-Working directory:  /tmp/tmp5qfykteg
-Command line:  c++ /tmp/tmp5qfykteg/testfile.cpp -pipe -D_FILE_OFFSET_BITS=64 -c -o /tmp/tmp5qfykteg/output.obj -std=c++11 
+Working directory:  /tmp/tmpbrb971v9
+Command line:  c++ /tmp/tmpbrb971v9/testfile.cpp -pipe -D_FILE_OFFSET_BITS=64 -c -o /tmp/tmpbrb971v9/output.obj -std=c++11 
 
 Code:
  int i = static_cast<int>(0);
@@ -27,8 +29,8 @@ Compiler stderr:
  
 Compiler accepts -std=c++11: YES
 Running compile:
-Working directory:  /tmp/tmpdj6s3c4u
-Command line:  c++ /tmp/tmpdj6s3c4u/testfile.cpp -pipe -D_FILE_OFFSET_BITS=64 -c -o /tmp/tmpdj6s3c4u/output.obj -O0 -fpermissive --print-search-dirs 
+Working directory:  /tmp/tmpg2dxd6dj
+Command line:  c++ /tmp/tmpg2dxd6dj/testfile.cpp -pipe -D_FILE_OFFSET_BITS=64 -c -o /tmp/tmpg2dxd6dj/output.obj -O0 -fpermissive --print-search-dirs 
 
 Code:
  
