@@ -1,0 +1,7 @@
+[
+  {
+    "directory": "/home/svetik/system_programming_tasks/accounts/build",
+    "command": "c++ -Isrc/accounts/src@accounts@@accounts@exe -Isrc/accounts -I../src/accounts -Isrc -I../src -fdiagnostics-color=always -fsanitize=address -fno-omit-frame-pointer -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++11 -g  -MD -MQ 'src/accounts/src@accounts@@accounts@exe/accounts.cc.o' -MF 'src/accounts/src@accounts@@accounts@exe/accounts.cc.o.d' -o 'src/accounts/src@accounts@@accounts@exe/accounts.cc.o' -c ../src/accounts/accounts.cc",
+    "file": "../src/accounts/accounts.cc"
+  }
+]
