@@ -1,12 +1,12 @@
 [
   {
     "directory": "/home/svetik/system_programming_tasks/tests_train/build",
-    "command": "c++ -Isrc/tests_train/src@tests_train@@tests_train@exe -Isrc/tests_train -I../src/tests_train -Isrc -I../src -fdiagnostics-color=always -fsanitize=address -fno-omit-frame-pointer -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++11 -g  -MD -MQ 'src/tests_train/src@tests_train@@tests_train@exe/main.cc.o' -MF 'src/tests_train/src@tests_train@@tests_train@exe/main.cc.o.d' -o 'src/tests_train/src@tests_train@@tests_train@exe/main.cc.o' -c ../src/tests_train/main.cc",
+    "command": "c++ -Isrc/tests_train/src@tests_train@@tests_train@exe -Isrc/tests_train -I../src/tests_train -Isrc -I../src -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++11 -g  -MD -MQ 'src/tests_train/src@tests_train@@tests_train@exe/main.cc.o' -MF 'src/tests_train/src@tests_train@@tests_train@exe/main.cc.o.d' -o 'src/tests_train/src@tests_train@@tests_train@exe/main.cc.o' -c ../src/tests_train/main.cc",
     "file": "../src/tests_train/main.cc"
   },
   {
     "directory": "/home/svetik/system_programming_tasks/tests_train/build",
-    "command": "c++ -Isrc/tests/src@tests@@message_test@exe -Isrc/tests -I../src/tests -Isrc -I../src -fdiagnostics-color=always -fsanitize=address -fno-omit-frame-pointer -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++11 -g -pthread  -MD -MQ 'src/tests/src@tests@@message_test@exe/message_test.cc.o' -MF 'src/tests/src@tests@@message_test@exe/message_test.cc.o.d' -o 'src/tests/src@tests@@message_test@exe/message_test.cc.o' -c ../src/tests/message_test.cc",
+    "command": "c++ -Isrc/tests/src@tests@@message_test@exe -Isrc/tests -I../src/tests -Isrc -I../src -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++11 -g -pthread  -MD -MQ 'src/tests/src@tests@@message_test@exe/message_test.cc.o' -MF 'src/tests/src@tests@@message_test@exe/message_test.cc.o.d' -o 'src/tests/src@tests@@message_test@exe/message_test.cc.o' -c ../src/tests/message_test.cc",
     "file": "../src/tests/message_test.cc"
   }
 ]

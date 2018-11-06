@@ -62,17 +62,17 @@ build PHONY: phony
 
 build src/tests_train/src@tests_train@@tests_train@exe/main.cc.o: cpp_COMPILER ../src/tests_train/main.cc
  DEPFILE = src/tests_train/src@tests_train@@tests_train@exe/main.cc.o.d
- ARGS = -Isrc/tests_train/src@tests_train@@tests_train@exe -Isrc/tests_train -I../src/tests_train -Isrc -I../src -fdiagnostics-color=always -fsanitize=address -fno-omit-frame-pointer -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++11 -g
+ ARGS = -Isrc/tests_train/src@tests_train@@tests_train@exe -Isrc/tests_train -I../src/tests_train -Isrc -I../src -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++11 -g
 
 build src/tests_train/tests_train: cpp_LINKER src/tests_train/src@tests_train@@tests_train@exe/main.cc.o
- LINK_ARGS = -fsanitize=address -Wl,--no-undefined -Wl,--as-needed
+ LINK_ARGS = -Wl,--no-undefined -Wl,--as-needed
 
 build src/tests/src@tests@@message_test@exe/message_test.cc.o: cpp_COMPILER ../src/tests/message_test.cc
  DEPFILE = src/tests/src@tests@@message_test@exe/message_test.cc.o.d
- ARGS = -Isrc/tests/src@tests@@message_test@exe -Isrc/tests -I../src/tests -Isrc -I../src -fdiagnostics-color=always -fsanitize=address -fno-omit-frame-pointer -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++11 -g -pthread
+ ARGS = -Isrc/tests/src@tests@@message_test@exe -Isrc/tests -I../src/tests -Isrc -I../src -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++11 -g -pthread
 
 build src/tests/message_test: cpp_LINKER src/tests/src@tests@@message_test@exe/message_test.cc.o | /usr/lib/libgtest.a /usr/lib/libgtest_main.a
- LINK_ARGS = -fsanitize=address -Wl,--no-undefined -Wl,--as-needed -Wl,--start-group -lgtest -lgtest_main -Wl,--end-group -pthread
+ LINK_ARGS = -Wl,--no-undefined -Wl,--as-needed -Wl,--start-group -lgtest -lgtest_main -Wl,--end-group -pthread
 
 # Test rules
 
