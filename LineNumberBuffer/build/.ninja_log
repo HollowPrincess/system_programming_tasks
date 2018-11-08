@@ -1,0 +1,13 @@
+# ninja log v5
+2	955	1541691495	src/LineNumberBuffer/src@LineNumberBuffer@@LineNumberBuffer@exe/main.cc.o	dfcd48b51ed306aa
+1	838	1541691955	src/LineNumberBuffer/src@LineNumberBuffer@@LineNumberBuffer@exe/LineNumberBuffer.cc.o	d9fc17de6f39e24e
+838	1143	1541691955	src/LineNumberBuffer/LineNumberBuffer	cbf14ef5734a4d13
+1	919	1541692319	src/LineNumberBuffer/src@LineNumberBuffer@@LineNumberBuffer@exe/LineNumberBuffer.cc.o	d9fc17de6f39e24e
+3	965	1541692319	src/LineNumberBuffer/src@LineNumberBuffer@@LineNumberBuffer@exe/main.cc.o	dfcd48b51ed306aa
+965	1182	1541692320	src/LineNumberBuffer/LineNumberBuffer	cbf14ef5734a4d13
+2	888	1541692444	src/LineNumberBuffer/src@LineNumberBuffer@@LineNumberBuffer@exe/main.cc.o	dfcd48b51ed306aa
+888	1104	1541692444	src/LineNumberBuffer/LineNumberBuffer	cbf14ef5734a4d13
+2	865	1541692621	src/LineNumberBuffer/src@LineNumberBuffer@@LineNumberBuffer@exe/main.cc.o	dfcd48b51ed306aa
+865	1081	1541692621	src/LineNumberBuffer/LineNumberBuffer	cbf14ef5734a4d13
+2	882	1541692645	src/LineNumberBuffer/src@LineNumberBuffer@@LineNumberBuffer@exe/main.cc.o	dfcd48b51ed306aa
+882	1095	1541692645	src/LineNumberBuffer/LineNumberBuffer	cbf14ef5734a4d13
