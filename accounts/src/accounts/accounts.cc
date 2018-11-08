@@ -1,3 +1,4 @@
+#include <fstream>
 #include <set>
 #include <string>
 #include <unordered_map>
@@ -110,7 +111,19 @@ int main() {
   My::group group1("group1");
   group1.addUser(user1);
   group1.addUser(user2);
-  group1.dropUser(user1);
+  // group1.dropUser(user1);
+
+  int size = std::Trait<My::account>::size(user1);
+  int calculatedSize =
+      sizeof(user1.id) + user1.name.size() + user1.surname.size();
+
+  int gsize = std::Trait<My::group>::size(group1);
+  int gcalculatedSize = sizeof(group1.id) + group1.name.size() +
+                        std::Trait<My::account>::size(user1) +
+                        std::Trait<My::account>::size(user2);
+  std::ofstream myLog("myLog.txt", std::ofstream::out);
+  myLog << size << "==" << calculatedSize << "\n"
+        << gsize << "==" << gcalculatedSize;
 
   return 0;
 }

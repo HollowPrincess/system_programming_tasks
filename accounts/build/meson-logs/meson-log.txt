@@ -1,4 +1,4 @@
-Build started at 2018-11-06T20:48:09.943561
+Build started at 2018-11-08T17:01:01.939738
 Main binary: /usr/bin/python3
 Python system: Linux
 The Meson build system
@@ -8,52 +8,18 @@ Build dir: /home/svetik/system_programming_tasks/accounts/build
 Build type: native build
 Project name: accounts
 Project version: 0.1.0
-Sanity testing C++ compiler: c++
-Is cross compiler: False.
-Sanity check compiler command line: c++ /home/svetik/system_programming_tasks/accounts/build/meson-private/sanitycheckcpp.cc -o /home/svetik/system_programming_tasks/accounts/build/meson-private/sanitycheckcpp.exe
-Sanity check compile stdout:
-
------
-Sanity check compile stderr:
-
------
-Running test binary command: /home/svetik/system_programming_tasks/accounts/build/meson-private/sanitycheckcpp.exe
 Native C++ compiler: c++ (gcc 7.3.0 "c++ (Ubuntu 7.3.0-27ubuntu1~18.04) 7.3.0")
 Build machine cpu family: x86_64
 Build machine cpu: x86_64
 src/accounts/meson.build:4: WARNING: Passed invalid keyword argument "dependences".
 WARNING: This will become a hard error in the future.
-Found pkg-config: /usr/bin/pkg-config (0.29.1)
-Determining dependency 'gtest_main' with pkg-config executable '/usr/bin/pkg-config'
-Called `/usr/bin/pkg-config --modversion gtest_main` -> 1
-
-Running compile:
-Working directory:  /tmp/tmpih7oiyxg
-Command line:  c++ /tmp/tmpih7oiyxg/testfile.cpp -pipe -D_FILE_OFFSET_BITS=64 -o /tmp/tmpih7oiyxg/output.exe -O0 -fpermissive -Wl,--start-group -lgtest -Wl,--end-group -Wl,--allow-shlib-undefined 
-
-Code:
- int main(int argc, char **argv) { return 0; }
-Compiler stdout:
- 
-Compiler stderr:
- 
-Running compile:
-Working directory:  /tmp/tmpae91ut5f
-Command line:  c++ /tmp/tmpae91ut5f/testfile.cpp -pipe -D_FILE_OFFSET_BITS=64 -o /tmp/tmpae91ut5f/output.exe -O0 -fpermissive -Wl,--start-group -lgtest_main -Wl,--end-group -Wl,--allow-shlib-undefined 
-
-Code:
- int main(int argc, char **argv) { return 0; }
-Compiler stdout:
- 
-Compiler stderr:
- 
-Dependency GTest found: YES (prebuilt)
+Dependency gtest found: YES (cached)
 Adding test "accounts.cc"
 Build targets in project: 2
 Found ninja-1.8.2 at /usr/bin/ninja
 Running compile:
-Working directory:  /tmp/tmp38ecowbs
-Command line:  c++ /tmp/tmp38ecowbs/testfile.cpp -pipe -D_FILE_OFFSET_BITS=64 -c -o /tmp/tmp38ecowbs/output.obj -std=c++11 
+Working directory:  /tmp/tmpcphrn5al
+Command line:  c++ /tmp/tmpcphrn5al/testfile.cpp -pipe -D_FILE_OFFSET_BITS=64 -c -o /tmp/tmpcphrn5al/output.obj -std=c++11 
 
 Code:
  int i = static_cast<int>(0);
@@ -63,8 +29,8 @@ Compiler stderr:
  
 Compiler accepts -std=c++11: YES
 Running compile:
-Working directory:  /tmp/tmpmbylcis8
-Command line:  c++ /tmp/tmpmbylcis8/testfile.cpp -pipe -D_FILE_OFFSET_BITS=64 -c -o /tmp/tmpmbylcis8/output.obj -O0 -fpermissive --print-search-dirs 
+Working directory:  /tmp/tmpc4lh0enp
+Command line:  c++ /tmp/tmpc4lh0enp/testfile.cpp -pipe -D_FILE_OFFSET_BITS=64 -c -o /tmp/tmpc4lh0enp/output.obj -O0 -fpermissive --print-search-dirs 
 
 Code:
  

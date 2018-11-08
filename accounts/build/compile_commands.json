@@ -6,7 +6,7 @@
   },
   {
     "directory": "/home/svetik/system_programming_tasks/accounts/build",
-    "command": "c++ -Isrc/tests/src@tests@@accounts_test.cc@exe -Isrc/tests -I../src/tests -Isrc -I../src -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++11 -g -pthread  -MD -MQ 'src/tests/src@tests@@accounts_test.cc@exe/accounts_test.cc.o' -MF 'src/tests/src@tests@@accounts_test.cc@exe/accounts_test.cc.o.d' -o 'src/tests/src@tests@@accounts_test.cc@exe/accounts_test.cc.o' -c ../src/tests/accounts_test.cc",
+    "command": "c++ -Isrc/tests/src@tests@@accounts_test@exe -Isrc/tests -I../src/tests -Isrc -I../src -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++11 -g -pthread  -MD -MQ 'src/tests/src@tests@@accounts_test@exe/accounts_test.cc.o' -MF 'src/tests/src@tests@@accounts_test@exe/accounts_test.cc.o.d' -o 'src/tests/src@tests@@accounts_test@exe/accounts_test.cc.o' -c ../src/tests/accounts_test.cc",
     "file": "../src/tests/accounts_test.cc"
   }
 ]
