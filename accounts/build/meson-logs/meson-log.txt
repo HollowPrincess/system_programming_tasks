@@ -1,4 +1,4 @@
-Build started at 2018-11-06T20:09:18.921156
+Build started at 2018-11-06T20:48:09.943561
 Main binary: /usr/bin/python3
 Python system: Linux
 The Meson build system
@@ -28,8 +28,8 @@ Determining dependency 'gtest_main' with pkg-config executable '/usr/bin/pkg-con
 Called `/usr/bin/pkg-config --modversion gtest_main` -> 1
 
 Running compile:
-Working directory:  /tmp/tmp15gp0nx8
-Command line:  c++ /tmp/tmp15gp0nx8/testfile.cpp -pipe -D_FILE_OFFSET_BITS=64 -o /tmp/tmp15gp0nx8/output.exe -O0 -fpermissive -Wl,--start-group -lgtest -Wl,--end-group -Wl,--allow-shlib-undefined 
+Working directory:  /tmp/tmpih7oiyxg
+Command line:  c++ /tmp/tmpih7oiyxg/testfile.cpp -pipe -D_FILE_OFFSET_BITS=64 -o /tmp/tmpih7oiyxg/output.exe -O0 -fpermissive -Wl,--start-group -lgtest -Wl,--end-group -Wl,--allow-shlib-undefined 
 
 Code:
  int main(int argc, char **argv) { return 0; }
@@ -38,8 +38,8 @@ Compiler stdout:
 Compiler stderr:
  
 Running compile:
-Working directory:  /tmp/tmphd419n13
-Command line:  c++ /tmp/tmphd419n13/testfile.cpp -pipe -D_FILE_OFFSET_BITS=64 -o /tmp/tmphd419n13/output.exe -O0 -fpermissive -Wl,--start-group -lgtest_main -Wl,--end-group -Wl,--allow-shlib-undefined 
+Working directory:  /tmp/tmpae91ut5f
+Command line:  c++ /tmp/tmpae91ut5f/testfile.cpp -pipe -D_FILE_OFFSET_BITS=64 -o /tmp/tmpae91ut5f/output.exe -O0 -fpermissive -Wl,--start-group -lgtest_main -Wl,--end-group -Wl,--allow-shlib-undefined 
 
 Code:
  int main(int argc, char **argv) { return 0; }
@@ -52,8 +52,8 @@ Adding test "accounts.cc"
 Build targets in project: 2
 Found ninja-1.8.2 at /usr/bin/ninja
 Running compile:
-Working directory:  /tmp/tmpz3s4qhxu
-Command line:  c++ /tmp/tmpz3s4qhxu/testfile.cpp -pipe -D_FILE_OFFSET_BITS=64 -c -o /tmp/tmpz3s4qhxu/output.obj -std=c++11 
+Working directory:  /tmp/tmp38ecowbs
+Command line:  c++ /tmp/tmp38ecowbs/testfile.cpp -pipe -D_FILE_OFFSET_BITS=64 -c -o /tmp/tmp38ecowbs/output.obj -std=c++11 
 
 Code:
  int i = static_cast<int>(0);
@@ -63,8 +63,8 @@ Compiler stderr:
  
 Compiler accepts -std=c++11: YES
 Running compile:
-Working directory:  /tmp/tmph4sohhga
-Command line:  c++ /tmp/tmph4sohhga/testfile.cpp -pipe -D_FILE_OFFSET_BITS=64 -c -o /tmp/tmph4sohhga/output.obj -O0 -fpermissive --print-search-dirs 
+Working directory:  /tmp/tmpmbylcis8
+Command line:  c++ /tmp/tmpmbylcis8/testfile.cpp -pipe -D_FILE_OFFSET_BITS=64 -c -o /tmp/tmpmbylcis8/output.obj -O0 -fpermissive --print-search-dirs 
 
 Code:
  

@@ -10,6 +10,7 @@ TEST(size_test, account_size) {
 
   EXPECT_EQ(size, calculatedSize);
 }
+
 TEST(size_test, group_size) {
   My::account user1("uname1", "unamee1");
   My::account user2("uname2", "unamee2");

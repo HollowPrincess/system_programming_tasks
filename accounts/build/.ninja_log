@@ -1,7 +1,7 @@
 # ninja log v5
-0	2102	1541524169	src/accounts/src@accounts@@accounts@exe/accounts.cc.o	171ba209b27fa1be
-2103	2344	1541524169	src/accounts/accounts	88d42e34c591e8d0
-2	3858	1541524170	src/tests/src@tests@@accounts_test@exe/accounts_test.cc.o	1554dae9c9d595d
-3862	4320	1541524171	src/tests/accounts_test	8403088f5006c2ad
-4	3770	1541524255	src/tests/src@tests@@accounts_test@exe/accounts_test.cc.o	1554dae9c9d595d
-3770	4219	1541524256	src/tests/accounts_test	8403088f5006c2ad
+0	2467	1541526500	src/accounts/src@accounts@@accounts@exe/accounts.cc.o	171ba209b27fa1be
+2469	2701	1541526500	src/accounts/accounts	88d42e34c591e8d0
+1	4284	1541526502	src/tests/src@tests@@accounts_test.cc@exe/accounts_test.cc.o	6a607f70f4670973
+4288	4764	1541526502	src/tests/accounts_test.cc	ecfdf3ca4c7f5f6b
+3	4494	1541526938	src/tests/src@tests@@accounts_test.cc@exe/accounts_test.cc.o	6a607f70f4670973
+4495	4948	1541526939	src/tests/accounts_test.cc	ecfdf3ca4c7f5f6b
