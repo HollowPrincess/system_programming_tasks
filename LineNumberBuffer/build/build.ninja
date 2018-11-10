@@ -62,14 +62,14 @@ build PHONY: phony
 
 build src/LineNumberBuffer/src@LineNumberBuffer@@LineNumberBuffer@exe/LineNumberBuffer.cc.o: cpp_COMPILER ../src/LineNumberBuffer/LineNumberBuffer.cc
  DEPFILE = src/LineNumberBuffer/src@LineNumberBuffer@@LineNumberBuffer@exe/LineNumberBuffer.cc.o.d
- ARGS = -Isrc/LineNumberBuffer/src@LineNumberBuffer@@LineNumberBuffer@exe -Isrc/LineNumberBuffer -I../src/LineNumberBuffer -Isrc -I../src -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++11 -g
+ ARGS = -Isrc/LineNumberBuffer/src@LineNumberBuffer@@LineNumberBuffer@exe -Isrc/LineNumberBuffer -I../src/LineNumberBuffer -Isrc -I../src -fdiagnostics-color=always -fsanitize=address -fno-omit-frame-pointer -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++11 -g
 
 build src/LineNumberBuffer/src@LineNumberBuffer@@LineNumberBuffer@exe/main.cc.o: cpp_COMPILER ../src/LineNumberBuffer/main.cc
  DEPFILE = src/LineNumberBuffer/src@LineNumberBuffer@@LineNumberBuffer@exe/main.cc.o.d
- ARGS = -Isrc/LineNumberBuffer/src@LineNumberBuffer@@LineNumberBuffer@exe -Isrc/LineNumberBuffer -I../src/LineNumberBuffer -Isrc -I../src -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++11 -g
+ ARGS = -Isrc/LineNumberBuffer/src@LineNumberBuffer@@LineNumberBuffer@exe -Isrc/LineNumberBuffer -I../src/LineNumberBuffer -Isrc -I../src -fdiagnostics-color=always -fsanitize=address -fno-omit-frame-pointer -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++11 -g
 
 build src/LineNumberBuffer/LineNumberBuffer: cpp_LINKER src/LineNumberBuffer/src@LineNumberBuffer@@LineNumberBuffer@exe/LineNumberBuffer.cc.o src/LineNumberBuffer/src@LineNumberBuffer@@LineNumberBuffer@exe/main.cc.o
- LINK_ARGS = -Wl,--no-undefined -Wl,--as-needed
+ LINK_ARGS = -fsanitize=address -Wl,--no-undefined -Wl,--as-needed
 
 # Test rules
 

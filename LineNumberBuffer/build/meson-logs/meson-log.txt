@@ -1,4 +1,4 @@
-Build started at 2018-11-08T18:19:13.889211
+Build started at 2018-11-10T18:15:22.464551
 Main binary: /usr/bin/python3
 Python system: Linux
 The Meson build system
@@ -8,16 +8,6 @@ Build dir: /home/svetik/system_programming_tasks/LineNumberBuffer/build
 Build type: native build
 Project name: LineNumberBuffer
 Project version: 0.1.0
-Sanity testing C++ compiler: c++
-Is cross compiler: False.
-Sanity check compiler command line: c++ /home/svetik/system_programming_tasks/LineNumberBuffer/build/meson-private/sanitycheckcpp.cc -o /home/svetik/system_programming_tasks/LineNumberBuffer/build/meson-private/sanitycheckcpp.exe
-Sanity check compile stdout:
-
------
-Sanity check compile stderr:
-
------
-Running test binary command: /home/svetik/system_programming_tasks/LineNumberBuffer/build/meson-private/sanitycheckcpp.exe
 Native C++ compiler: c++ (gcc 7.3.0 "c++ (Ubuntu 7.3.0-27ubuntu1~18.04) 7.3.0")
 Build machine cpu family: x86_64
 Build machine cpu: x86_64
@@ -26,8 +16,8 @@ WARNING: This will become a hard error in the future.
 Build targets in project: 1
 Found ninja-1.8.2 at /usr/bin/ninja
 Running compile:
-Working directory:  /tmp/tmpt17zpwn1
-Command line:  c++ /tmp/tmpt17zpwn1/testfile.cpp -pipe -D_FILE_OFFSET_BITS=64 -c -o /tmp/tmpt17zpwn1/output.obj -std=c++11 
+Working directory:  /tmp/tmp_4m09ghb
+Command line:  c++ /tmp/tmp_4m09ghb/testfile.cpp -pipe -D_FILE_OFFSET_BITS=64 -c -o /tmp/tmp_4m09ghb/output.obj -std=c++11 
 
 Code:
  int i = static_cast<int>(0);
@@ -37,8 +27,8 @@ Compiler stderr:
  
 Compiler accepts -std=c++11: YES
 Running compile:
-Working directory:  /tmp/tmpfsh6370e
-Command line:  c++ /tmp/tmpfsh6370e/testfile.cpp -pipe -D_FILE_OFFSET_BITS=64 -c -o /tmp/tmpfsh6370e/output.obj -O0 -fpermissive --print-search-dirs 
+Working directory:  /tmp/tmp3omajulo
+Command line:  c++ /tmp/tmp3omajulo/testfile.cpp -pipe -D_FILE_OFFSET_BITS=64 -c -o /tmp/tmp3omajulo/output.obj -O0 -fpermissive --print-search-dirs 
 
 Code:
  

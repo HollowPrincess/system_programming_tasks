@@ -1,12 +1,12 @@
 [
   {
     "directory": "/home/svetik/system_programming_tasks/LineNumberBuffer/build",
-    "command": "c++ -Isrc/LineNumberBuffer/src@LineNumberBuffer@@LineNumberBuffer@exe -Isrc/LineNumberBuffer -I../src/LineNumberBuffer -Isrc -I../src -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++11 -g  -MD -MQ 'src/LineNumberBuffer/src@LineNumberBuffer@@LineNumberBuffer@exe/LineNumberBuffer.cc.o' -MF 'src/LineNumberBuffer/src@LineNumberBuffer@@LineNumberBuffer@exe/LineNumberBuffer.cc.o.d' -o 'src/LineNumberBuffer/src@LineNumberBuffer@@LineNumberBuffer@exe/LineNumberBuffer.cc.o' -c ../src/LineNumberBuffer/LineNumberBuffer.cc",
+    "command": "c++ -Isrc/LineNumberBuffer/src@LineNumberBuffer@@LineNumberBuffer@exe -Isrc/LineNumberBuffer -I../src/LineNumberBuffer -Isrc -I../src -fdiagnostics-color=always -fsanitize=address -fno-omit-frame-pointer -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++11 -g  -MD -MQ 'src/LineNumberBuffer/src@LineNumberBuffer@@LineNumberBuffer@exe/LineNumberBuffer.cc.o' -MF 'src/LineNumberBuffer/src@LineNumberBuffer@@LineNumberBuffer@exe/LineNumberBuffer.cc.o.d' -o 'src/LineNumberBuffer/src@LineNumberBuffer@@LineNumberBuffer@exe/LineNumberBuffer.cc.o' -c ../src/LineNumberBuffer/LineNumberBuffer.cc",
     "file": "../src/LineNumberBuffer/LineNumberBuffer.cc"
   },
   {
     "directory": "/home/svetik/system_programming_tasks/LineNumberBuffer/build",
-    "command": "c++ -Isrc/LineNumberBuffer/src@LineNumberBuffer@@LineNumberBuffer@exe -Isrc/LineNumberBuffer -I../src/LineNumberBuffer -Isrc -I../src -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++11 -g  -MD -MQ 'src/LineNumberBuffer/src@LineNumberBuffer@@LineNumberBuffer@exe/main.cc.o' -MF 'src/LineNumberBuffer/src@LineNumberBuffer@@LineNumberBuffer@exe/main.cc.o.d' -o 'src/LineNumberBuffer/src@LineNumberBuffer@@LineNumberBuffer@exe/main.cc.o' -c ../src/LineNumberBuffer/main.cc",
+    "command": "c++ -Isrc/LineNumberBuffer/src@LineNumberBuffer@@LineNumberBuffer@exe -Isrc/LineNumberBuffer -I../src/LineNumberBuffer -Isrc -I../src -fdiagnostics-color=always -fsanitize=address -fno-omit-frame-pointer -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++11 -g  -MD -MQ 'src/LineNumberBuffer/src@LineNumberBuffer@@LineNumberBuffer@exe/main.cc.o' -MF 'src/LineNumberBuffer/src@LineNumberBuffer@@LineNumberBuffer@exe/main.cc.o.d' -o 'src/LineNumberBuffer/src@LineNumberBuffer@@LineNumberBuffer@exe/main.cc.o' -c ../src/LineNumberBuffer/main.cc",
     "file": "../src/LineNumberBuffer/main.cc"
   }
 ]
