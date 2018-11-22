@@ -1,0 +1,20 @@
+# ninja log v5
+0	1314	1542908224289715888	src/parallel_sorting_algorithm/src@parallel_sorting_algorithm@@parallel_sorting_algorithm@exe/parallel_sort.cc.o	54b15bec3c0b3432
+1	1228	1542908502058782528	src/parallel_sorting_algorithm/src@parallel_sorting_algorithm@@parallel_sorting_algorithm@exe/parallel_sort.cc.o	54b15bec3c0b3432
+1	1256	1542908546541202412	src/parallel_sorting_algorithm/src@parallel_sorting_algorithm@@parallel_sorting_algorithm@exe/parallel_sort.cc.o	54b15bec3c0b3432
+1	1255	1542908704086106873	src/parallel_sorting_algorithm/src@parallel_sorting_algorithm@@parallel_sorting_algorithm@exe/parallel_sort.cc.o	54b15bec3c0b3432
+0	1177	1542909097218196983	src/parallel_sorting_algorithm/src@parallel_sorting_algorithm@@parallel_sorting_algorithm@exe/parallel_sort.cc.o	54b15bec3c0b3432
+1	1178	1542909251094242023	src/parallel_sorting_algorithm/src@parallel_sorting_algorithm@@parallel_sorting_algorithm@exe/parallel_sort.cc.o	54b15bec3c0b3432
+1	1243	1542909556593804455	src/parallel_sorting_algorithm/src@parallel_sorting_algorithm@@parallel_sorting_algorithm@exe/parallel_sort.cc.o	54b15bec3c0b3432
+0	1450	1542909556801853190	src/parallel_sorting_algorithm/src@parallel_sorting_algorithm@@parallel_sorting_algorithm@exe/main.cc.o	d7e7d2b35aac310d
+0	922	1542909694214041617	src/parallel_sorting_algorithm/src@parallel_sorting_algorithm@@parallel_sorting_algorithm@exe/parallel_sort.cc.o	54b15bec3c0b3432
+0	1320	1542909694614135337	src/parallel_sorting_algorithm/src@parallel_sorting_algorithm@@parallel_sorting_algorithm@exe/main.cc.o	d7e7d2b35aac310d
+0	772	1542909736051842006	src/parallel_sorting_algorithm/src@parallel_sorting_algorithm@@parallel_sorting_algorithm@exe/main.cc.o	d7e7d2b35aac310d
+0	904	1542909839400051040	src/parallel_sorting_algorithm/src@parallel_sorting_algorithm@@parallel_sorting_algorithm@exe/main.cc.o	d7e7d2b35aac310d
+3	952	1542910041891484101	src/parallel_sorting_algorithm/src@parallel_sorting_algorithm@@parallel_sorting_algorithm@exe/parallel_sort.cc.o	54b15bec3c0b3432
+0	1422	1542910042359593754	src/parallel_sorting_algorithm/src@parallel_sorting_algorithm@@parallel_sorting_algorithm@exe/main.cc.o	d7e7d2b35aac310d
+1	994	1542910084601488801	src/parallel_sorting_algorithm/src@parallel_sorting_algorithm@@parallel_sorting_algorithm@exe/parallel_sort.cc.o	54b15bec3c0b3432
+1	1528	1542910085133613451	src/parallel_sorting_algorithm/src@parallel_sorting_algorithm@@parallel_sorting_algorithm@exe/main.cc.o	d7e7d2b35aac310d
+0	640	1542910180659990242	build.ninja	397e0ee263632225
+0	885	1542910181704234853	src/parallel_sorting_algorithm/src@parallel_sorting_algorithm@@parallel_sorting_algorithm@exe/parallel_sort.cc.o	54b15bec3c0b3432
+4	886	1542910287216950917	src/parallel_sorting_algorithm/src@parallel_sorting_algorithm@@parallel_sorting_algorithm@exe/parallel_sort.cc.o	54b15bec3c0b3432

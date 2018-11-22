@@ -1,5 +1,5 @@
 parallel_sorting_algorithm_src = files([
- 'main.cc'
+ 'parallel_sort.cc'
 ])
 executable(
  'parallel_sorting_algorithm',
