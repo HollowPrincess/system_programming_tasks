@@ -3,7 +3,7 @@
 #include <thread>
 #include <vector>
 
-unsigned int n = std::thread::hardware_concurrency();
+long unsigned int n = std::thread::hardware_concurrency();
 std::vector<std::thread> threads{n};
 
 template <typename T, typename Iter>
