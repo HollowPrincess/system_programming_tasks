@@ -67,11 +67,11 @@ build src/parallel_sorting_algorithm/src@parallel_sorting_algorithm@@parallel_so
 build src/parallel_sorting_algorithm/parallel_sorting_algorithm: cpp_LINKER src/parallel_sorting_algorithm/src@parallel_sorting_algorithm@@parallel_sorting_algorithm@exe/parallel_sort.cc.o
  LINK_ARGS = -Wl,--no-undefined -Wl,--as-needed
 
-build src/tests/src@tests@@parallel_sort@exe/parallel_sort_test.cc.o: cpp_COMPILER ../src/tests/parallel_sort_test.cc
- DEPFILE = src/tests/src@tests@@parallel_sort@exe/parallel_sort_test.cc.o.d
- ARGS = -Isrc/tests/src@tests@@parallel_sort@exe -Isrc/tests -I../src/tests -Isrc -I../src -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++11 -g -pthread
+build src/tests/src@tests@@parallel_sort.cc@exe/parallel_sort_test.cc.o: cpp_COMPILER ../src/tests/parallel_sort_test.cc
+ DEPFILE = src/tests/src@tests@@parallel_sort.cc@exe/parallel_sort_test.cc.o.d
+ ARGS = -Isrc/tests/src@tests@@parallel_sort.cc@exe -Isrc/tests -I../src/tests -Isrc -I../src -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++11 -g -pthread
 
-build src/tests/parallel_sort: cpp_LINKER src/tests/src@tests@@parallel_sort@exe/parallel_sort_test.cc.o | /usr/lib/libgtest.a /usr/lib/libgtest_main.a
+build src/tests/parallel_sort.cc: cpp_LINKER src/tests/src@tests@@parallel_sort.cc@exe/parallel_sort_test.cc.o | /usr/lib/libgtest.a /usr/lib/libgtest_main.a
  LINK_ARGS = -Wl,--no-undefined -Wl,--as-needed -Wl,--start-group -lgtest -lgtest_main -Wl,--end-group -pthread
 
 # Test rules
@@ -120,7 +120,7 @@ build meson-uninstall: CUSTOM_COMMAND PHONY
 
 build uninstall: phony meson-uninstall
 
-build all: phony src/parallel_sorting_algorithm/parallel_sorting_algorithm src/tests/parallel_sort
+build all: phony src/parallel_sorting_algorithm/parallel_sorting_algorithm src/tests/parallel_sort.cc
 
 default all
 

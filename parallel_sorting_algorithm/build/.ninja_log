@@ -1,3 +1,7 @@
 # ninja log v5
-0	1231	1542913432309680234	src/parallel_sorting_algorithm/src@parallel_sorting_algorithm@@parallel_sorting_algorithm@exe/parallel_sort.cc.o	54b15bec3c0b3432
-0	1770	1542913432845805820	src/tests/src@tests@@parallel_sort@exe/parallel_sort_test.cc.o	ce4691db57be1919
+0	1203	1543419146642968978	src/parallel_sorting_algorithm/src@parallel_sorting_algorithm@@parallel_sorting_algorithm@exe/parallel_sort.cc.o	54b15bec3c0b3432
+1204	1363	1543419146798968978	src/parallel_sorting_algorithm/parallel_sorting_algorithm	47a53da5e95a2fc1
+2	1964	1543419147406968978	src/tests/src@tests@@parallel_sort.cc@exe/parallel_sort_test.cc.o	b4ca1c33d72c8ff4
+1965	2140	1543419147582968978	src/tests/parallel_sort.cc	53cbf8b9ef958a13
+1	1452	1543419257806968978	src/tests/src@tests@@parallel_sort.cc@exe/parallel_sort_test.cc.o	b4ca1c33d72c8ff4
+1453	1640	1543419257990968978	src/tests/parallel_sort.cc	53cbf8b9ef958a13

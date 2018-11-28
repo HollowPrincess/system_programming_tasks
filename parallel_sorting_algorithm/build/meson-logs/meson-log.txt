@@ -1,4 +1,4 @@
-Build started at 2018-11-22T22:03:45.215796
+Build started at 2018-11-28T18:32:13.307703
 Main binary: /usr/bin/python3
 Python system: Linux
 The Meson build system
@@ -29,8 +29,8 @@ Determining dependency 'gtest_main' with pkg-config executable '/usr/bin/pkg-con
 Called `/usr/bin/pkg-config --modversion gtest_main` -> 1
 
 Running compile:
-Working directory:  /tmp/tmpd1ljs3ms
-Command line:  c++ /tmp/tmpd1ljs3ms/testfile.cpp -pipe -D_FILE_OFFSET_BITS=64 -o /tmp/tmpd1ljs3ms/output.exe -O0 -fpermissive -Wl,--start-group -lgtest -Wl,--end-group -Wl,--allow-shlib-undefined 
+Working directory:  /tmp/tmppopdgkla
+Command line:  c++ /tmp/tmppopdgkla/testfile.cpp -pipe -D_FILE_OFFSET_BITS=64 -o /tmp/tmppopdgkla/output.exe -O0 -fpermissive -Wl,--start-group -lgtest -Wl,--end-group -Wl,--allow-shlib-undefined 
 
 Code:
  int main(int argc, char **argv) { return 0; }
@@ -39,8 +39,8 @@ Compiler stdout:
 Compiler stderr:
  
 Running compile:
-Working directory:  /tmp/tmpu8rxat08
-Command line:  c++ /tmp/tmpu8rxat08/testfile.cpp -pipe -D_FILE_OFFSET_BITS=64 -o /tmp/tmpu8rxat08/output.exe -O0 -fpermissive -Wl,--start-group -lgtest_main -Wl,--end-group -Wl,--allow-shlib-undefined 
+Working directory:  /tmp/tmpvvtzmt90
+Command line:  c++ /tmp/tmpvvtzmt90/testfile.cpp -pipe -D_FILE_OFFSET_BITS=64 -o /tmp/tmpvvtzmt90/output.exe -O0 -fpermissive -Wl,--start-group -lgtest_main -Wl,--end-group -Wl,--allow-shlib-undefined 
 
 Code:
  int main(int argc, char **argv) { return 0; }
@@ -49,12 +49,13 @@ Compiler stdout:
 Compiler stderr:
  
 Dependency GTest found: YES (prebuilt)
+Dependency threads found: YES (cached)
 Adding test "parallel_sort.cc"
 Build targets in project: 2
 Found ninja-1.8.2.git.kitware.dyndep-1.jobserver-1 at /home/svetlana/.local/bin/ninja
 Running compile:
-Working directory:  /tmp/tmpqr_26nth
-Command line:  c++ /tmp/tmpqr_26nth/testfile.cpp -pipe -D_FILE_OFFSET_BITS=64 -c -o /tmp/tmpqr_26nth/output.obj -std=c++11 
+Working directory:  /tmp/tmplxc49hw_
+Command line:  c++ /tmp/tmplxc49hw_/testfile.cpp -pipe -D_FILE_OFFSET_BITS=64 -c -o /tmp/tmplxc49hw_/output.obj -std=c++11 
 
 Code:
  int i = static_cast<int>(0);
@@ -64,8 +65,8 @@ Compiler stderr:
  
 Compiler accepts -std=c++11: YES
 Running compile:
-Working directory:  /tmp/tmpclf9e89r
-Command line:  c++ /tmp/tmpclf9e89r/testfile.cpp -pipe -D_FILE_OFFSET_BITS=64 -c -o /tmp/tmpclf9e89r/output.obj -O0 -fpermissive --print-search-dirs 
+Working directory:  /tmp/tmpk19qnm8d
+Command line:  c++ /tmp/tmpk19qnm8d/testfile.cpp -pipe -D_FILE_OFFSET_BITS=64 -c -o /tmp/tmpk19qnm8d/output.obj -O0 -fpermissive --print-search-dirs 
 
 Code:
  

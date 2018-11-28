@@ -3,7 +3,7 @@
 #include <thread>
 #include <vector>
 
-long unsigned int n = std::thread::hardware_concurrency();
+unsigned int n = std::thread::hardware_concurrency();
 std::vector<std::thread> threads{n};
 
 template <typename T, typename Iter>
@@ -21,13 +21,13 @@ void parallel_sorting(Iter beginElement, Iter endElement) {
     bool isOneThreadBusy = false;
     for (auto &thr : threads) {
       if (!isOneThreadBusy) {
-        if (thr.joinable()) {
+        if (!thr.joinable()) {
           thr = std::thread{parallel_sorting<T, Iter>, beginElement,
                             rightArrayCurrentElement};
           isOneThreadBusy = true;
         };
       } else {
-        if (thr.joinable()) {
+        if (!thr.joinable()) {
           thr = std::thread{parallel_sorting<T, Iter>, rightArrayCurrentElement,
                             endElement};
           break;
@@ -72,7 +72,5 @@ int main() {
   unsigned int k = std::thread::hardware_concurrency();
   std::ofstream myLog("myLog.txt", std::ofstream::out);
   myLog << k;
-  std::vector<int> vec{5, 3, 4, 2};
-  parallel_sorting<int>(vec.begin(), vec.end());
   return 0;
 }
