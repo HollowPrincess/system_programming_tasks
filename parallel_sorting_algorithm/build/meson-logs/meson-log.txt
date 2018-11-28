@@ -1,61 +1,27 @@
-Build started at 2018-11-28T18:32:13.307703
+Build started at 2018-11-28T22:56:01.393932
 Main binary: /usr/bin/python3
 Python system: Linux
 The Meson build system
 Version: 0.48.2
-Source dir: /home/svetlana/Documents/Projects/parallel_sorting_algorithm
-Build dir: /home/svetlana/Documents/Projects/parallel_sorting_algorithm/build
+Source dir: /home/svetlana/Documents/Projects/system_programming_tasks/parallel_sorting_algorithm
+Build dir: /home/svetlana/Documents/Projects/system_programming_tasks/parallel_sorting_algorithm/build
 Build type: native build
 Project name: parallel_sorting_algorithm
 Project version: 0.1.0
-Sanity testing C++ compiler: c++
-Is cross compiler: False.
-Sanity check compiler command line: c++ /home/svetlana/Documents/Projects/parallel_sorting_algorithm/build/meson-private/sanitycheckcpp.cc -o /home/svetlana/Documents/Projects/parallel_sorting_algorithm/build/meson-private/sanitycheckcpp.exe
-Sanity check compile stdout:
-
------
-Sanity check compile stderr:
-
------
-Running test binary command: /home/svetlana/Documents/Projects/parallel_sorting_algorithm/build/meson-private/sanitycheckcpp.exe
 Native C++ compiler: c++ (gcc 7.3.0 "c++ (Ubuntu 7.3.0-27ubuntu1~18.04) 7.3.0")
 Build machine cpu family: x86_64
 Build machine cpu: x86_64
-Dependency threads found: YES 
-src/parallel_sorting_algorithm/meson.build:7: WARNING: Passed invalid keyword argument "dependences".
+Dependency threads found: YES (cached)
+src/parallel_sorting_algorithm/meson.build:8: WARNING: Passed invalid keyword argument "dependences".
 WARNING: This will become a hard error in the future.
-Found pkg-config: /usr/bin/pkg-config (0.29.1)
-Determining dependency 'gtest_main' with pkg-config executable '/usr/bin/pkg-config'
-Called `/usr/bin/pkg-config --modversion gtest_main` -> 1
-
-Running compile:
-Working directory:  /tmp/tmppopdgkla
-Command line:  c++ /tmp/tmppopdgkla/testfile.cpp -pipe -D_FILE_OFFSET_BITS=64 -o /tmp/tmppopdgkla/output.exe -O0 -fpermissive -Wl,--start-group -lgtest -Wl,--end-group -Wl,--allow-shlib-undefined 
-
-Code:
- int main(int argc, char **argv) { return 0; }
-Compiler stdout:
- 
-Compiler stderr:
- 
-Running compile:
-Working directory:  /tmp/tmpvvtzmt90
-Command line:  c++ /tmp/tmpvvtzmt90/testfile.cpp -pipe -D_FILE_OFFSET_BITS=64 -o /tmp/tmpvvtzmt90/output.exe -O0 -fpermissive -Wl,--start-group -lgtest_main -Wl,--end-group -Wl,--allow-shlib-undefined 
-
-Code:
- int main(int argc, char **argv) { return 0; }
-Compiler stdout:
- 
-Compiler stderr:
- 
-Dependency GTest found: YES (prebuilt)
+Dependency gtest found: YES (cached)
 Dependency threads found: YES (cached)
 Adding test "parallel_sort.cc"
 Build targets in project: 2
 Found ninja-1.8.2.git.kitware.dyndep-1.jobserver-1 at /home/svetlana/.local/bin/ninja
 Running compile:
-Working directory:  /tmp/tmplxc49hw_
-Command line:  c++ /tmp/tmplxc49hw_/testfile.cpp -pipe -D_FILE_OFFSET_BITS=64 -c -o /tmp/tmplxc49hw_/output.obj -std=c++11 
+Working directory:  /tmp/tmp6zn77tn3
+Command line:  c++ /tmp/tmp6zn77tn3/testfile.cpp -pipe -D_FILE_OFFSET_BITS=64 -c -o /tmp/tmp6zn77tn3/output.obj -std=c++11 
 
 Code:
  int i = static_cast<int>(0);
@@ -65,8 +31,8 @@ Compiler stderr:
  
 Compiler accepts -std=c++11: YES
 Running compile:
-Working directory:  /tmp/tmpk19qnm8d
-Command line:  c++ /tmp/tmpk19qnm8d/testfile.cpp -pipe -D_FILE_OFFSET_BITS=64 -c -o /tmp/tmpk19qnm8d/output.obj -O0 -fpermissive --print-search-dirs 
+Working directory:  /tmp/tmpgohd7tj6
+Command line:  c++ /tmp/tmpgohd7tj6/testfile.cpp -pipe -D_FILE_OFFSET_BITS=64 -c -o /tmp/tmpgohd7tj6/output.obj -O0 -fpermissive --print-search-dirs 
 
 Code:
  

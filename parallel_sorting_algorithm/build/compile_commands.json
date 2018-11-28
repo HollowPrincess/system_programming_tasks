@@ -1,13 +1,13 @@
 [
   {
-    "directory": "/home/svetlana/Documents/Projects/parallel_sorting_algorithm/build",
-    "command": "c++ -Isrc/parallel_sorting_algorithm/src@parallel_sorting_algorithm@@parallel_sorting_algorithm@exe -Isrc/parallel_sorting_algorithm -I../src/parallel_sorting_algorithm -Isrc -I../src -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++11 -g  -MD -MQ 'src/parallel_sorting_algorithm/src@parallel_sorting_algorithm@@parallel_sorting_algorithm@exe/parallel_sort.cc.o' -MF 'src/parallel_sorting_algorithm/src@parallel_sorting_algorithm@@parallel_sorting_algorithm@exe/parallel_sort.cc.o.d' -o 'src/parallel_sorting_algorithm/src@parallel_sorting_algorithm@@parallel_sorting_algorithm@exe/parallel_sort.cc.o' -c ../src/parallel_sorting_algorithm/parallel_sort.cc",
-    "file": "../src/parallel_sorting_algorithm/parallel_sort.cc",
-    "output": "src/parallel_sorting_algorithm/src@parallel_sorting_algorithm@@parallel_sorting_algorithm@exe/parallel_sort.cc.o"
+    "directory": "/home/svetlana/Documents/Projects/system_programming_tasks/parallel_sorting_algorithm/build",
+    "command": "c++ -Isrc/parallel_sorting_algorithm/src@parallel_sorting_algorithm@@parallel_sorting_algorithm@exe -Isrc/parallel_sorting_algorithm -I../src/parallel_sorting_algorithm -Isrc -I../src -fdiagnostics-color=always -fsanitize=address -fno-omit-frame-pointer -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++11 -g  -MD -MQ 'src/parallel_sorting_algorithm/src@parallel_sorting_algorithm@@parallel_sorting_algorithm@exe/main.cc.o' -MF 'src/parallel_sorting_algorithm/src@parallel_sorting_algorithm@@parallel_sorting_algorithm@exe/main.cc.o.d' -o 'src/parallel_sorting_algorithm/src@parallel_sorting_algorithm@@parallel_sorting_algorithm@exe/main.cc.o' -c ../src/parallel_sorting_algorithm/main.cc",
+    "file": "../src/parallel_sorting_algorithm/main.cc",
+    "output": "src/parallel_sorting_algorithm/src@parallel_sorting_algorithm@@parallel_sorting_algorithm@exe/main.cc.o"
   },
   {
-    "directory": "/home/svetlana/Documents/Projects/parallel_sorting_algorithm/build",
-    "command": "c++ -Isrc/tests/src@tests@@parallel_sort.cc@exe -Isrc/tests -I../src/tests -Isrc -I../src -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++11 -g -pthread  -MD -MQ 'src/tests/src@tests@@parallel_sort.cc@exe/parallel_sort_test.cc.o' -MF 'src/tests/src@tests@@parallel_sort.cc@exe/parallel_sort_test.cc.o.d' -o 'src/tests/src@tests@@parallel_sort.cc@exe/parallel_sort_test.cc.o' -c ../src/tests/parallel_sort_test.cc",
+    "directory": "/home/svetlana/Documents/Projects/system_programming_tasks/parallel_sorting_algorithm/build",
+    "command": "c++ -Isrc/tests/src@tests@@parallel_sort.cc@exe -Isrc/tests -I../src/tests -Isrc -I../src -fdiagnostics-color=always -fsanitize=address -fno-omit-frame-pointer -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++11 -g -pthread  -MD -MQ 'src/tests/src@tests@@parallel_sort.cc@exe/parallel_sort_test.cc.o' -MF 'src/tests/src@tests@@parallel_sort.cc@exe/parallel_sort_test.cc.o.d' -o 'src/tests/src@tests@@parallel_sort.cc@exe/parallel_sort_test.cc.o' -c ../src/tests/parallel_sort_test.cc",
     "file": "../src/tests/parallel_sort_test.cc",
     "output": "src/tests/src@tests@@parallel_sort.cc@exe/parallel_sort_test.cc.o"
   }

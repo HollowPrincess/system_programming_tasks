@@ -1,4 +1,4 @@
-#include <fstream>
+#pragma once
 #include <math.h>
 #include <thread>
 #include <vector>
@@ -18,29 +18,44 @@ void parallel_sorting(Iter beginElement, Iter endElement) {
     advance(rightArrayCurrentElement,
             round((endElement - 1 - beginElement) / 2) + 1);
 
-    bool isOneThreadBusy = false;
+    bool isBusy = false;
     for (auto &thr : threads) {
-      if (!isOneThreadBusy) {
-        if (!thr.joinable()) {
-          thr = std::thread{parallel_sorting<T, Iter>, beginElement,
-                            rightArrayCurrentElement};
-          isOneThreadBusy = true;
-        };
-      } else {
-        if (!thr.joinable()) {
-          thr = std::thread{parallel_sorting<T, Iter>, rightArrayCurrentElement,
-                            endElement};
-          break;
-        };
+      if (!thr.joinable()) {
+        thr = std::thread{parallel_sorting<T, Iter>, beginElement,
+                          rightArrayCurrentElement};
+        thr.join();
+        isBusy = true;
+        break;
       };
     };
+
+    if (!isBusy) {
+      parallel_sorting<T>(beginElement, rightArrayCurrentElement);
+    };
+
+    isBusy = false;
     for (auto &thr : threads) {
+      if (!thr.joinable()) {
+        thr = std::thread{parallel_sorting<T, Iter>, rightArrayCurrentElement,
+                          endElement};
+        thr.join();
+        isBusy = true;
+        break;
+      };
+    };
+
+    if (!isBusy) {
+      parallel_sorting<T>(rightArrayCurrentElement, endElement);
+    };
+    /*for (auto &thr : threads) {
       if (thr.joinable()) {
         thr.join();
       };
-    };
-    parallel_sorting<T>(beginElement, rightArrayCurrentElement);
-    parallel_sorting<T>(rightArrayCurrentElement, endElement);
+    };*/
+
+    // parallel_sorting<T>(beginElement, rightArrayCurrentElement);
+
+    // parallel_sorting<T>(rightArrayCurrentElement, endElement);
 
     // merge sorted arrays
     std::vector<T> tmpVector(endElement - beginElement); // empty
@@ -66,11 +81,4 @@ void parallel_sorting(Iter beginElement, Iter endElement) {
       *iter = *resultVectorCurrentElement;
     };
   };
-}
-
-int main() {
-  unsigned int k = std::thread::hardware_concurrency();
-  std::ofstream myLog("myLog.txt", std::ofstream::out);
-  myLog << k;
-  return 0;
 }

@@ -1,5 +1,5 @@
-#include "../../../iterator_and_merge_sort/src/iterator_and_merge_sort/merge_sort.cc"
-#include "../parallel_sorting_algorithm/parallel_sort.cc"
+#include <../../../iterator_and_merge_sort/src/iterator_and_merge_sort/merge_sort.cc>
+#include <../parallel_sorting_algorithm/parallel_sort.h>
 #include <gtest/gtest.h>
 #include <vector>
 

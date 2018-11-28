@@ -1,7 +1,16 @@
 # ninja log v5
-0	1203	1543419146642968978	src/parallel_sorting_algorithm/src@parallel_sorting_algorithm@@parallel_sorting_algorithm@exe/parallel_sort.cc.o	54b15bec3c0b3432
-1204	1363	1543419146798968978	src/parallel_sorting_algorithm/parallel_sorting_algorithm	47a53da5e95a2fc1
-2	1964	1543419147406968978	src/tests/src@tests@@parallel_sort.cc@exe/parallel_sort_test.cc.o	b4ca1c33d72c8ff4
-1965	2140	1543419147582968978	src/tests/parallel_sort.cc	53cbf8b9ef958a13
-1	1452	1543419257806968978	src/tests/src@tests@@parallel_sort.cc@exe/parallel_sort_test.cc.o	b4ca1c33d72c8ff4
-1453	1640	1543419257990968978	src/tests/parallel_sort.cc	53cbf8b9ef958a13
+0	697	1543434927266816976	src/parallel_sorting_algorithm/src@parallel_sorting_algorithm@@parallel_sorting_algorithm@exe/main.cc.o	d7e7d2b35aac310d
+0	1050	1543434927618992976	src/tests/src@tests@@parallel_sort.cc@exe/parallel_sort_test.cc.o	b4ca1c33d72c8ff4
+0	337	1543434961527938976	build.ninja	90f889c86577aa02
+1	755	1543434962348348977	src/parallel_sorting_algorithm/src@parallel_sorting_algorithm@@parallel_sorting_algorithm@exe/main.cc.o	6d137d8bc11cabd4
+755	839	1543434962432390976	src/parallel_sorting_algorithm/parallel_sorting_algorithm	58257a0878b8173f
+1	1048	1543434962640494977	src/tests/src@tests@@parallel_sort.cc@exe/parallel_sort_test.cc.o	3576be05e3e2b5f3
+1048	1176	1543434962768558976	src/tests/parallel_sort.cc	c845d7d2b8a18a2d
+1	866	1543435452957530976	src/parallel_sorting_algorithm/src@parallel_sorting_algorithm@@parallel_sorting_algorithm@exe/main.cc.o	6d137d8bc11cabd4
+866	956	1543435453049576976	src/parallel_sorting_algorithm/parallel_sorting_algorithm	58257a0878b8173f
+1	1141	1543435453233668977	src/tests/src@tests@@parallel_sort.cc@exe/parallel_sort_test.cc.o	3576be05e3e2b5f3
+1141	1279	1543435453369736976	src/tests/parallel_sort.cc	c845d7d2b8a18a2d
+0	714	1543435533921992977	src/parallel_sorting_algorithm/src@parallel_sorting_algorithm@@parallel_sorting_algorithm@exe/main.cc.o	6d137d8bc11cabd4
+715	787	1543435533994028976	src/parallel_sorting_algorithm/parallel_sorting_algorithm	58257a0878b8173f
+1	690	1543435564197122976	src/parallel_sorting_algorithm/src@parallel_sorting_algorithm@@parallel_sorting_algorithm@exe/main.cc.o	6d137d8bc11cabd4
+691	766	1543435564273160976	src/parallel_sorting_algorithm/parallel_sorting_algorithm	58257a0878b8173f

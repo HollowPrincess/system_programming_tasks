@@ -1,5 +1,6 @@
 parallel_sorting_algorithm_src = files([
- 'parallel_sort.cc'
+ 'parallel_sort.h',
+ 'main.cc'
 ])
 
 thread_dep = dependency('threads')
