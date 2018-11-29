@@ -1,0 +1,104 @@
+[
+  {
+    "directory": "/home/svetlana/Documents/Projects/system_programming_tasks/proj_with_seven_tasks/build",
+    "command": "c++ -Isrc/proj_with_seven_tasks/accounts/src@proj_with_seven_tasks@accounts@@accounts@exe -Isrc/proj_with_seven_tasks/accounts -I../src/proj_with_seven_tasks/accounts -Isrc/proj_with_seven_tasks -I../src/proj_with_seven_tasks -fdiagnostics-color=always -fsanitize=address -fno-omit-frame-pointer -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++11 -g  -MD -MQ 'src/proj_with_seven_tasks/accounts/src@proj_with_seven_tasks@accounts@@accounts@exe/accounts.cc.o' -MF 'src/proj_with_seven_tasks/accounts/src@proj_with_seven_tasks@accounts@@accounts@exe/accounts.cc.o.d' -o 'src/proj_with_seven_tasks/accounts/src@proj_with_seven_tasks@accounts@@accounts@exe/accounts.cc.o' -c ../src/proj_with_seven_tasks/accounts/accounts.cc",
+    "file": "../src/proj_with_seven_tasks/accounts/accounts.cc",
+    "output": "src/proj_with_seven_tasks/accounts/src@proj_with_seven_tasks@accounts@@accounts@exe/accounts.cc.o"
+  },
+  {
+    "directory": "/home/svetlana/Documents/Projects/system_programming_tasks/proj_with_seven_tasks/build",
+    "command": "c++ -Isrc/proj_with_seven_tasks/iterator_and_merge_sort/src@proj_with_seven_tasks@iterator_and_merge_sort@@iterator_and_merge_sort@exe -Isrc/proj_with_seven_tasks/iterator_and_merge_sort -I../src/proj_with_seven_tasks/iterator_and_merge_sort -Isrc/proj_with_seven_tasks -I../src/proj_with_seven_tasks -fdiagnostics-color=always -fsanitize=address -fno-omit-frame-pointer -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++11 -g  -MD -MQ 'src/proj_with_seven_tasks/iterator_and_merge_sort/src@proj_with_seven_tasks@iterator_and_merge_sort@@iterator_and_merge_sort@exe/my_ostream_iterator.cc.o' -MF 'src/proj_with_seven_tasks/iterator_and_merge_sort/src@proj_with_seven_tasks@iterator_and_merge_sort@@iterator_and_merge_sort@exe/my_ostream_iterator.cc.o.d' -o 'src/proj_with_seven_tasks/iterator_and_merge_sort/src@proj_with_seven_tasks@iterator_and_merge_sort@@iterator_and_merge_sort@exe/my_ostream_iterator.cc.o' -c ../src/proj_with_seven_tasks/iterator_and_merge_sort/my_ostream_iterator.cc",
+    "file": "../src/proj_with_seven_tasks/iterator_and_merge_sort/my_ostream_iterator.cc",
+    "output": "src/proj_with_seven_tasks/iterator_and_merge_sort/src@proj_with_seven_tasks@iterator_and_merge_sort@@iterator_and_merge_sort@exe/my_ostream_iterator.cc.o"
+  },
+  {
+    "directory": "/home/svetlana/Documents/Projects/system_programming_tasks/proj_with_seven_tasks/build",
+    "command": "c++ -Isrc/proj_with_seven_tasks/iterator_and_merge_sort/src@proj_with_seven_tasks@iterator_and_merge_sort@@iterator_and_merge_sort@exe -Isrc/proj_with_seven_tasks/iterator_and_merge_sort -I../src/proj_with_seven_tasks/iterator_and_merge_sort -Isrc/proj_with_seven_tasks -I../src/proj_with_seven_tasks -fdiagnostics-color=always -fsanitize=address -fno-omit-frame-pointer -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++11 -g  -MD -MQ 'src/proj_with_seven_tasks/iterator_and_merge_sort/src@proj_with_seven_tasks@iterator_and_merge_sort@@iterator_and_merge_sort@exe/merge_sort.cc.o' -MF 'src/proj_with_seven_tasks/iterator_and_merge_sort/src@proj_with_seven_tasks@iterator_and_merge_sort@@iterator_and_merge_sort@exe/merge_sort.cc.o.d' -o 'src/proj_with_seven_tasks/iterator_and_merge_sort/src@proj_with_seven_tasks@iterator_and_merge_sort@@iterator_and_merge_sort@exe/merge_sort.cc.o' -c ../src/proj_with_seven_tasks/iterator_and_merge_sort/merge_sort.cc",
+    "file": "../src/proj_with_seven_tasks/iterator_and_merge_sort/merge_sort.cc",
+    "output": "src/proj_with_seven_tasks/iterator_and_merge_sort/src@proj_with_seven_tasks@iterator_and_merge_sort@@iterator_and_merge_sort@exe/merge_sort.cc.o"
+  },
+  {
+    "directory": "/home/svetlana/Documents/Projects/system_programming_tasks/proj_with_seven_tasks/build",
+    "command": "c++ -Isrc/proj_with_seven_tasks/LineNumberBuffer/src@proj_with_seven_tasks@LineNumberBuffer@@LineNumberBuffer@exe -Isrc/proj_with_seven_tasks/LineNumberBuffer -I../src/proj_with_seven_tasks/LineNumberBuffer -Isrc/proj_with_seven_tasks -I../src/proj_with_seven_tasks -fdiagnostics-color=always -fsanitize=address -fno-omit-frame-pointer -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++11 -g  -MD -MQ 'src/proj_with_seven_tasks/LineNumberBuffer/src@proj_with_seven_tasks@LineNumberBuffer@@LineNumberBuffer@exe/LineNumberBuffer.cc.o' -MF 'src/proj_with_seven_tasks/LineNumberBuffer/src@proj_with_seven_tasks@LineNumberBuffer@@LineNumberBuffer@exe/LineNumberBuffer.cc.o.d' -o 'src/proj_with_seven_tasks/LineNumberBuffer/src@proj_with_seven_tasks@LineNumberBuffer@@LineNumberBuffer@exe/LineNumberBuffer.cc.o' -c ../src/proj_with_seven_tasks/LineNumberBuffer/LineNumberBuffer.cc",
+    "file": "../src/proj_with_seven_tasks/LineNumberBuffer/LineNumberBuffer.cc",
+    "output": "src/proj_with_seven_tasks/LineNumberBuffer/src@proj_with_seven_tasks@LineNumberBuffer@@LineNumberBuffer@exe/LineNumberBuffer.cc.o"
+  },
+  {
+    "directory": "/home/svetlana/Documents/Projects/system_programming_tasks/proj_with_seven_tasks/build",
+    "command": "c++ -Isrc/proj_with_seven_tasks/LineNumberBuffer/src@proj_with_seven_tasks@LineNumberBuffer@@LineNumberBuffer@exe -Isrc/proj_with_seven_tasks/LineNumberBuffer -I../src/proj_with_seven_tasks/LineNumberBuffer -Isrc/proj_with_seven_tasks -I../src/proj_with_seven_tasks -fdiagnostics-color=always -fsanitize=address -fno-omit-frame-pointer -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++11 -g  -MD -MQ 'src/proj_with_seven_tasks/LineNumberBuffer/src@proj_with_seven_tasks@LineNumberBuffer@@LineNumberBuffer@exe/main.cc.o' -MF 'src/proj_with_seven_tasks/LineNumberBuffer/src@proj_with_seven_tasks@LineNumberBuffer@@LineNumberBuffer@exe/main.cc.o.d' -o 'src/proj_with_seven_tasks/LineNumberBuffer/src@proj_with_seven_tasks@LineNumberBuffer@@LineNumberBuffer@exe/main.cc.o' -c ../src/proj_with_seven_tasks/LineNumberBuffer/main.cc",
+    "file": "../src/proj_with_seven_tasks/LineNumberBuffer/main.cc",
+    "output": "src/proj_with_seven_tasks/LineNumberBuffer/src@proj_with_seven_tasks@LineNumberBuffer@@LineNumberBuffer@exe/main.cc.o"
+  },
+  {
+    "directory": "/home/svetlana/Documents/Projects/system_programming_tasks/proj_with_seven_tasks/build",
+    "command": "c++ -Isrc/proj_with_seven_tasks/parallel_sorting_algorithm/src@proj_with_seven_tasks@parallel_sorting_algorithm@@parallel_sorting_algorithm@exe -Isrc/proj_with_seven_tasks/parallel_sorting_algorithm -I../src/proj_with_seven_tasks/parallel_sorting_algorithm -Isrc/proj_with_seven_tasks -I../src/proj_with_seven_tasks -fdiagnostics-color=always -fsanitize=address -fno-omit-frame-pointer -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++11 -g  -MD -MQ 'src/proj_with_seven_tasks/parallel_sorting_algorithm/src@proj_with_seven_tasks@parallel_sorting_algorithm@@parallel_sorting_algorithm@exe/main.cc.o' -MF 'src/proj_with_seven_tasks/parallel_sorting_algorithm/src@proj_with_seven_tasks@parallel_sorting_algorithm@@parallel_sorting_algorithm@exe/main.cc.o.d' -o 'src/proj_with_seven_tasks/parallel_sorting_algorithm/src@proj_with_seven_tasks@parallel_sorting_algorithm@@parallel_sorting_algorithm@exe/main.cc.o' -c ../src/proj_with_seven_tasks/parallel_sorting_algorithm/main.cc",
+    "file": "../src/proj_with_seven_tasks/parallel_sorting_algorithm/main.cc",
+    "output": "src/proj_with_seven_tasks/parallel_sorting_algorithm/src@proj_with_seven_tasks@parallel_sorting_algorithm@@parallel_sorting_algorithm@exe/main.cc.o"
+  },
+  {
+    "directory": "/home/svetlana/Documents/Projects/system_programming_tasks/proj_with_seven_tasks/build",
+    "command": "c++ -Isrc/proj_with_seven_tasks/param_tests/src@proj_with_seven_tasks@param_tests@@param_tests@exe -Isrc/proj_with_seven_tasks/param_tests -I../src/proj_with_seven_tasks/param_tests -Isrc/proj_with_seven_tasks -I../src/proj_with_seven_tasks -fdiagnostics-color=always -fsanitize=address -fno-omit-frame-pointer -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++11 -g  -MD -MQ 'src/proj_with_seven_tasks/param_tests/src@proj_with_seven_tasks@param_tests@@param_tests@exe/MyGuard.cc.o' -MF 'src/proj_with_seven_tasks/param_tests/src@proj_with_seven_tasks@param_tests@@param_tests@exe/MyGuard.cc.o.d' -o 'src/proj_with_seven_tasks/param_tests/src@proj_with_seven_tasks@param_tests@@param_tests@exe/MyGuard.cc.o' -c ../src/proj_with_seven_tasks/param_tests/MyGuard.cc",
+    "file": "../src/proj_with_seven_tasks/param_tests/MyGuard.cc",
+    "output": "src/proj_with_seven_tasks/param_tests/src@proj_with_seven_tasks@param_tests@@param_tests@exe/MyGuard.cc.o"
+  },
+  {
+    "directory": "/home/svetlana/Documents/Projects/system_programming_tasks/proj_with_seven_tasks/build",
+    "command": "c++ -Isrc/proj_with_seven_tasks/param_tests/src@proj_with_seven_tasks@param_tests@@param_tests@exe -Isrc/proj_with_seven_tasks/param_tests -I../src/proj_with_seven_tasks/param_tests -Isrc/proj_with_seven_tasks -I../src/proj_with_seven_tasks -fdiagnostics-color=always -fsanitize=address -fno-omit-frame-pointer -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++11 -g  -MD -MQ 'src/proj_with_seven_tasks/param_tests/src@proj_with_seven_tasks@param_tests@@param_tests@exe/MyArray2D.cc.o' -MF 'src/proj_with_seven_tasks/param_tests/src@proj_with_seven_tasks@param_tests@@param_tests@exe/MyArray2D.cc.o.d' -o 'src/proj_with_seven_tasks/param_tests/src@proj_with_seven_tasks@param_tests@@param_tests@exe/MyArray2D.cc.o' -c ../src/proj_with_seven_tasks/param_tests/MyArray2D.cc",
+    "file": "../src/proj_with_seven_tasks/param_tests/MyArray2D.cc",
+    "output": "src/proj_with_seven_tasks/param_tests/src@proj_with_seven_tasks@param_tests@@param_tests@exe/MyArray2D.cc.o"
+  },
+  {
+    "directory": "/home/svetlana/Documents/Projects/system_programming_tasks/proj_with_seven_tasks/build",
+    "command": "c++ -Isrc/proj_with_seven_tasks/param_tests/src@proj_with_seven_tasks@param_tests@@param_tests@exe -Isrc/proj_with_seven_tasks/param_tests -I../src/proj_with_seven_tasks/param_tests -Isrc/proj_with_seven_tasks -I../src/proj_with_seven_tasks -fdiagnostics-color=always -fsanitize=address -fno-omit-frame-pointer -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++11 -g  -MD -MQ 'src/proj_with_seven_tasks/param_tests/src@proj_with_seven_tasks@param_tests@@param_tests@exe/MyMaskedArray2D.cc.o' -MF 'src/proj_with_seven_tasks/param_tests/src@proj_with_seven_tasks@param_tests@@param_tests@exe/MyMaskedArray2D.cc.o.d' -o 'src/proj_with_seven_tasks/param_tests/src@proj_with_seven_tasks@param_tests@@param_tests@exe/MyMaskedArray2D.cc.o' -c ../src/proj_with_seven_tasks/param_tests/MyMaskedArray2D.cc",
+    "file": "../src/proj_with_seven_tasks/param_tests/MyMaskedArray2D.cc",
+    "output": "src/proj_with_seven_tasks/param_tests/src@proj_with_seven_tasks@param_tests@@param_tests@exe/MyMaskedArray2D.cc.o"
+  },
+  {
+    "directory": "/home/svetlana/Documents/Projects/system_programming_tasks/proj_with_seven_tasks/build",
+    "command": "c++ -Isrc/proj_with_seven_tasks/tests_train/src@proj_with_seven_tasks@tests_train@@tests_train@exe -Isrc/proj_with_seven_tasks/tests_train -I../src/proj_with_seven_tasks/tests_train -Isrc/proj_with_seven_tasks -I../src/proj_with_seven_tasks -fdiagnostics-color=always -fsanitize=address -fno-omit-frame-pointer -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++11 -g  -MD -MQ 'src/proj_with_seven_tasks/tests_train/src@proj_with_seven_tasks@tests_train@@tests_train@exe/main.cc.o' -MF 'src/proj_with_seven_tasks/tests_train/src@proj_with_seven_tasks@tests_train@@tests_train@exe/main.cc.o.d' -o 'src/proj_with_seven_tasks/tests_train/src@proj_with_seven_tasks@tests_train@@tests_train@exe/main.cc.o' -c ../src/proj_with_seven_tasks/tests_train/main.cc",
+    "file": "../src/proj_with_seven_tasks/tests_train/main.cc",
+    "output": "src/proj_with_seven_tasks/tests_train/src@proj_with_seven_tasks@tests_train@@tests_train@exe/main.cc.o"
+  },
+  {
+    "directory": "/home/svetlana/Documents/Projects/system_programming_tasks/proj_with_seven_tasks/build",
+    "command": "c++ -Isrc/proj_with_seven_tasks/vector_project/src@proj_with_seven_tasks@vector_project@@vector_project@exe -Isrc/proj_with_seven_tasks/vector_project -I../src/proj_with_seven_tasks/vector_project -Isrc/proj_with_seven_tasks -I../src/proj_with_seven_tasks -fdiagnostics-color=always -fsanitize=address -fno-omit-frame-pointer -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++11 -g  -MD -MQ 'src/proj_with_seven_tasks/vector_project/src@proj_with_seven_tasks@vector_project@@vector_project@exe/main.cc.o' -MF 'src/proj_with_seven_tasks/vector_project/src@proj_with_seven_tasks@vector_project@@vector_project@exe/main.cc.o.d' -o 'src/proj_with_seven_tasks/vector_project/src@proj_with_seven_tasks@vector_project@@vector_project@exe/main.cc.o' -c ../src/proj_with_seven_tasks/vector_project/main.cc",
+    "file": "../src/proj_with_seven_tasks/vector_project/main.cc",
+    "output": "src/proj_with_seven_tasks/vector_project/src@proj_with_seven_tasks@vector_project@@vector_project@exe/main.cc.o"
+  },
+  {
+    "directory": "/home/svetlana/Documents/Projects/system_programming_tasks/proj_with_seven_tasks/build",
+    "command": "c++ -Isrc/tests/accounts/src@tests@accounts@@accounts_test@exe -Isrc/tests/accounts -I../src/tests/accounts -Isrc/tests -I../src/tests -fdiagnostics-color=always -fsanitize=address -fno-omit-frame-pointer -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++11 -g -pthread  -MD -MQ 'src/tests/accounts/src@tests@accounts@@accounts_test@exe/accounts_test.cc.o' -MF 'src/tests/accounts/src@tests@accounts@@accounts_test@exe/accounts_test.cc.o.d' -o 'src/tests/accounts/src@tests@accounts@@accounts_test@exe/accounts_test.cc.o' -c ../src/tests/accounts/accounts_test.cc",
+    "file": "../src/tests/accounts/accounts_test.cc",
+    "output": "src/tests/accounts/src@tests@accounts@@accounts_test@exe/accounts_test.cc.o"
+  },
+  {
+    "directory": "/home/svetlana/Documents/Projects/system_programming_tasks/proj_with_seven_tasks/build",
+    "command": "c++ -Isrc/tests/iterator_and_merge_sort/src@tests@iterator_and_merge_sort@@merge_sort@exe -Isrc/tests/iterator_and_merge_sort -I../src/tests/iterator_and_merge_sort -Isrc/tests -I../src/tests -fdiagnostics-color=always -fsanitize=address -fno-omit-frame-pointer -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++11 -g -pthread  -MD -MQ 'src/tests/iterator_and_merge_sort/src@tests@iterator_and_merge_sort@@merge_sort@exe/merge_sort_test.cc.o' -MF 'src/tests/iterator_and_merge_sort/src@tests@iterator_and_merge_sort@@merge_sort@exe/merge_sort_test.cc.o.d' -o 'src/tests/iterator_and_merge_sort/src@tests@iterator_and_merge_sort@@merge_sort@exe/merge_sort_test.cc.o' -c ../src/tests/iterator_and_merge_sort/merge_sort_test.cc",
+    "file": "../src/tests/iterator_and_merge_sort/merge_sort_test.cc",
+    "output": "src/tests/iterator_and_merge_sort/src@tests@iterator_and_merge_sort@@merge_sort@exe/merge_sort_test.cc.o"
+  },
+  {
+    "directory": "/home/svetlana/Documents/Projects/system_programming_tasks/proj_with_seven_tasks/build",
+    "command": "c++ -Isrc/tests/parallel_sorting_algorithm/src@tests@parallel_sorting_algorithm@@parallel_sort.cc@exe -Isrc/tests/parallel_sorting_algorithm -I../src/tests/parallel_sorting_algorithm -Isrc/tests -I../src/tests -fdiagnostics-color=always -fsanitize=address -fno-omit-frame-pointer -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++11 -g -pthread  -MD -MQ 'src/tests/parallel_sorting_algorithm/src@tests@parallel_sorting_algorithm@@parallel_sort.cc@exe/parallel_sort_test.cc.o' -MF 'src/tests/parallel_sorting_algorithm/src@tests@parallel_sorting_algorithm@@parallel_sort.cc@exe/parallel_sort_test.cc.o.d' -o 'src/tests/parallel_sorting_algorithm/src@tests@parallel_sorting_algorithm@@parallel_sort.cc@exe/parallel_sort_test.cc.o' -c ../src/tests/parallel_sorting_algorithm/parallel_sort_test.cc",
+    "file": "../src/tests/parallel_sorting_algorithm/parallel_sort_test.cc",
+    "output": "src/tests/parallel_sorting_algorithm/src@tests@parallel_sorting_algorithm@@parallel_sort.cc@exe/parallel_sort_test.cc.o"
+  },
+  {
+    "directory": "/home/svetlana/Documents/Projects/system_programming_tasks/proj_with_seven_tasks/build",
+    "command": "c++ -Isrc/tests/param_tests/src@tests@param_tests@@array2D_test.cc@exe -Isrc/tests/param_tests -I../src/tests/param_tests -Isrc/tests -I../src/tests -fdiagnostics-color=always -fsanitize=address -fno-omit-frame-pointer -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++11 -g -pthread  -MD -MQ 'src/tests/param_tests/src@tests@param_tests@@array2D_test.cc@exe/mask_test.cc.o' -MF 'src/tests/param_tests/src@tests@param_tests@@array2D_test.cc@exe/mask_test.cc.o.d' -o 'src/tests/param_tests/src@tests@param_tests@@array2D_test.cc@exe/mask_test.cc.o' -c ../src/tests/param_tests/mask_test.cc",
+    "file": "../src/tests/param_tests/mask_test.cc",
+    "output": "src/tests/param_tests/src@tests@param_tests@@array2D_test.cc@exe/mask_test.cc.o"
+  },
+  {
+    "directory": "/home/svetlana/Documents/Projects/system_programming_tasks/proj_with_seven_tasks/build",
+    "command": "c++ -Isrc/tests/param_tests/src@tests@param_tests@@array2D_test.cc@exe -Isrc/tests/param_tests -I../src/tests/param_tests -Isrc/tests -I../src/tests -fdiagnostics-color=always -fsanitize=address -fno-omit-frame-pointer -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++11 -g -pthread  -MD -MQ 'src/tests/param_tests/src@tests@param_tests@@array2D_test.cc@exe/array2D_test.cc.o' -MF 'src/tests/param_tests/src@tests@param_tests@@array2D_test.cc@exe/array2D_test.cc.o.d' -o 'src/tests/param_tests/src@tests@param_tests@@array2D_test.cc@exe/array2D_test.cc.o' -c ../src/tests/param_tests/array2D_test.cc",
+    "file": "../src/tests/param_tests/array2D_test.cc",
+    "output": "src/tests/param_tests/src@tests@param_tests@@array2D_test.cc@exe/array2D_test.cc.o"
+  },
+  {
+    "directory": "/home/svetlana/Documents/Projects/system_programming_tasks/proj_with_seven_tasks/build",
+    "command": "c++ -Isrc/tests/tests_train/src@tests@tests_train@@message_test@exe -Isrc/tests/tests_train -I../src/tests/tests_train -Isrc/tests -I../src/tests -fdiagnostics-color=always -fsanitize=address -fno-omit-frame-pointer -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++11 -g -pthread  -MD -MQ 'src/tests/tests_train/src@tests@tests_train@@message_test@exe/message_test.cc.o' -MF 'src/tests/tests_train/src@tests@tests_train@@message_test@exe/message_test.cc.o.d' -o 'src/tests/tests_train/src@tests@tests_train@@message_test@exe/message_test.cc.o' -c ../src/tests/tests_train/message_test.cc",
+    "file": "../src/tests/tests_train/message_test.cc",
+    "output": "src/tests/tests_train/src@tests@tests_train@@message_test@exe/message_test.cc.o"
+  }
+]

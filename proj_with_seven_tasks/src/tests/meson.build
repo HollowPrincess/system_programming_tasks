@@ -1,0 +1,6 @@
+src = include_directories('.')
+subdir('accounts')
+subdir('iterator_and_merge_sort')
+subdir('parallel_sorting_algorithm')
+subdir('param_tests')
+subdir('tests_train')
