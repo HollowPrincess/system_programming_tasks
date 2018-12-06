@@ -22,7 +22,10 @@ int main() {
   myLog << "Number Of Kernels: " << k << "\n";
 
   std::vector<myTime> vectorOfIntervals;
-  std::vector<int> vecForSort = {5, 3, 4, 2};
+  std::vector<int> vecForSort;
+  for (int counter = 1024; counter > 0; counter--) {
+    vecForSort.push_back(counter);
+  };
   int maxSizeOfVec = vecForSort.size();
   std::vector<int> vecCopy;
   std::chrono::time_point<std::chrono::system_clock> start;

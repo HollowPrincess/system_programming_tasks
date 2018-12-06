@@ -53,3 +53,7 @@
 167	4388	1543508026261687827	src/tests/param_tests/src@tests@param_tests@@array2D_test.cc@exe/array2D_test.cc.o	1292372c32c2d35
 4388	4693	1543508026569687827	src/tests/param_tests/array2D_test.cc	21b78d6e2f97ad58
 0	442	1543509163513687827	build.ninja	4162f7e74d7be7ba
+1	1335	1544116945037114018	src/proj_with_seven_tasks/parallel_sorting_algorithm/src@proj_with_seven_tasks@parallel_sorting_algorithm@@parallel_sorting_algorithm@exe/main.cc.o	72f184fd09b7c268
+1335	1546	1544116945245114018	src/proj_with_seven_tasks/parallel_sorting_algorithm/parallel_sorting_algorithm	9d2e31ea70dbb539
+2	1586	1544116945289114018	src/tests/parallel_sorting_algorithm/src@tests@parallel_sorting_algorithm@@parallel_sort.cc@exe/parallel_sort_test.cc.o	c72e838342640733
+1586	1732	1544116945437114018	src/tests/parallel_sorting_algorithm/parallel_sort.cc	b3b01d33df853b9c
