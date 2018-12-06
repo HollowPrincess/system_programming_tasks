@@ -1,4 +1,4 @@
-Build started at 2018-11-29T19:32:43.357700
+Build started at 2018-12-06T20:27:29.066722
 Main binary: /usr/bin/python3
 Python system: Linux
 The Meson build system
@@ -42,8 +42,8 @@ Program doxygen found: YES (/usr/bin/doxygen)
 Build targets in project: 13
 Found ninja-1.8.2.git.kitware.dyndep-1.jobserver-1 at /home/svetlana/.local/bin/ninja
 Running compile:
-Working directory:  /tmp/tmpoxyn61ov
-Command line:  c++ /tmp/tmpoxyn61ov/testfile.cpp -pipe -D_FILE_OFFSET_BITS=64 -c -o /tmp/tmpoxyn61ov/output.obj -std=c++11 
+Working directory:  /tmp/tmpxfgvozmj
+Command line:  c++ /tmp/tmpxfgvozmj/testfile.cpp -pipe -D_FILE_OFFSET_BITS=64 -c -o /tmp/tmpxfgvozmj/output.obj -std=c++11 
 
 Code:
  int i = static_cast<int>(0);
@@ -53,8 +53,8 @@ Compiler stderr:
  
 Compiler accepts -std=c++11: YES
 Running compile:
-Working directory:  /tmp/tmptgxojmvc
-Command line:  c++ /tmp/tmptgxojmvc/testfile.cpp -pipe -D_FILE_OFFSET_BITS=64 -c -o /tmp/tmptgxojmvc/output.obj -O0 -fpermissive --print-search-dirs 
+Working directory:  /tmp/tmp7dz_ja9a
+Command line:  c++ /tmp/tmp7dz_ja9a/testfile.cpp -pipe -D_FILE_OFFSET_BITS=64 -c -o /tmp/tmp7dz_ja9a/output.obj -O0 -fpermissive --print-search-dirs 
 
 Code:
  

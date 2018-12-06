@@ -57,3 +57,4 @@
 1335	1546	1544116945245114018	src/proj_with_seven_tasks/parallel_sorting_algorithm/parallel_sorting_algorithm	9d2e31ea70dbb539
 2	1586	1544116945289114018	src/tests/parallel_sorting_algorithm/src@tests@parallel_sorting_algorithm@@parallel_sort.cc@exe/parallel_sort_test.cc.o	c72e838342640733
 1586	1732	1544116945437114018	src/tests/parallel_sorting_algorithm/parallel_sort.cc	b3b01d33df853b9c
+0	2130	1544117249445114018	build.ninja	4162f7e74d7be7ba
