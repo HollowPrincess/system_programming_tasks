@@ -1,3 +1,6 @@
+/**
+ * @brief Classes which mimik work of accounts and groups on social sites
+ */
 #include <fstream>
 #include <set>
 #include <string>
@@ -5,10 +8,16 @@
 #include <unordered_set>
 
 namespace My {
+/**
+ * @brief Struct which contains users IDs and checks is the new ID is unique
+ */
 struct accountsManager {
   std::set<int> accountsBase;
   int maxID;
 };
+/**
+ * @brief Struct which contains groups IDs and checks is the new ID is unique
+ */
 struct groupsManager {
   std::set<int> groupsBase;
   int maxID;
@@ -16,10 +25,20 @@ struct groupsManager {
 accountsManager amanager;
 groupsManager gmanager;
 
+/**
+ * @brief Class which contains information about users (id, name, surname) and
+ * creates a new account
+ */
 class account {
 public:
   int id;
   std::string name, surname;
+  /**
+   * @brief Account constructor
+   *
+   * @param name Name of a new user
+   * @param surname Surname of a new user
+   */
   account(std::string name, std::string surname) {
     if (amanager.accountsBase.empty()) {
       amanager.accountsBase.insert(1);
@@ -40,12 +59,20 @@ public:
   ~account() {}
 };
 
+/**
+ * @brief Class which contains information about groups(id, name, users list who
+ * are in the group) and creats a new account
+ */
 class group {
 public:
   int id;
   std::string name;
   std::set<My::account> users;
-
+  /**
+   * @brief Group constructor
+   *
+   * @param name Name of a new group
+   */
   group(std::string name) {
     if (gmanager.groupsBase.empty()) {
       gmanager.groupsBase.insert(1);
@@ -57,8 +84,21 @@ public:
       gmanager.groupsBase.insert(gmanager.maxID);
     };
   }
-
+  /**
+   * @brief Method which add a new user into group
+   *
+   * @param user Name of user class object
+   *
+   * @return Nothing
+   */
   void addUser(My::account user) { users.insert(user); }
+  /**
+   * @brief Method which drop a user from group
+   *
+   * @param user Name of user class object
+   *
+   * @return Nothing
+   */
   void dropUser(My::account user) { users.erase(user); }
 
   ~group() {}
@@ -75,15 +115,38 @@ template <> struct hash<My::account> {
   }
 };
 
+/**
+ * @brief Template of structure for calculating of control sum
+ */
 template <class T> struct Trait;
 
+/**
+ * @brief Template of structure for calculating of control sum in account
+ */
 template <> struct Trait<My::account> {
+  /**
+   * @brief Method which calculates a control sum of user class object
+   *
+   * @param user Object for calculating the control sum
+   *
+   * @return Size of user class object
+   */
   static int size(const My::account &user) {
     return sizeof(user.id) + user.name.size() + user.surname.size();
   }
 };
 
+/**
+ * @brief Template of structure for calculating of control sum in group
+ */
 template <> struct Trait<My::group> {
+  /**
+   * @brief Method which calculates a control sum of group class object
+   *
+   * @param group Object for calculating the control sum
+   *
+   * @return Size of group class object
+   */
   static int size(const My::group &group) {
     int size = sizeof(group.id) + group.name.size();
     for (auto iter = group.users.begin(); iter != group.users.end(); iter++)
@@ -93,6 +156,14 @@ template <> struct Trait<My::group> {
 };
 } // namespace std
 
+/**
+ * @brief Entry point
+ *
+ * Execution of the program
+ * starts here.
+ *
+ * @return Program exit status
+ */
 int main() {
   My::account user1("uname1", "unamee1");
   My::account user2("uname2", "unamee2");

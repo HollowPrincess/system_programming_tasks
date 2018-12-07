@@ -1,3 +1,11 @@
+/**
+ * @brief This method does merge sorting between two iterators
+ *
+ * @param beginElement first iterator
+ * @param endElement second iterator
+ *
+ * @return Nothing. Sorted values are between input iterators
+ */
 #include <math.h>
 #include <vector>
 

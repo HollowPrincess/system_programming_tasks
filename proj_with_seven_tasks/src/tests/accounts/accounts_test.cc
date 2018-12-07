@@ -1,5 +1,5 @@
-#include <../../../src/proj_with_seven_tasks/accounts/accounts.cc>
 #include <gtest/gtest.h>
+#include <proj_with_seven_tasks/accounts/accounts.cc>
 
 TEST(size_test, account_size) {
   My::account user("uname1", "unamee1");

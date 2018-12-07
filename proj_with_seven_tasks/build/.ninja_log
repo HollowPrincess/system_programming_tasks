@@ -58,3 +58,9 @@
 2	1586	1544116945289114018	src/tests/parallel_sorting_algorithm/src@tests@parallel_sorting_algorithm@@parallel_sort.cc@exe/parallel_sort_test.cc.o	c72e838342640733
 1586	1732	1544116945437114018	src/tests/parallel_sorting_algorithm/parallel_sort.cc	b3b01d33df853b9c
 0	2130	1544117249445114018	build.ninja	4162f7e74d7be7ba
+0	3549	1544198057810832352	build.ninja	4162f7e74d7be7ba
+0	563	1544201225645956000	build.ninja	4162f7e74d7be7ba
+3	1958	1544201227690978000	src/proj_with_seven_tasks/iterator_and_merge_sort/src@proj_with_seven_tasks@iterator_and_merge_sort@@iterator_and_merge_sort@exe/merge_sort.cc.o	3636771617abf1fe
+2	3364	1544201229099681999	src/proj_with_seven_tasks/accounts/src@proj_with_seven_tasks@accounts@@accounts@exe/accounts.cc.o	507332acfd8f834
+2	516	1544201377051262584	src/proj_with_seven_tasks/iterator_and_merge_sort/iterator_and_merge_sort	e9b70a30082f43d5
+2	536	1544201377071262584	src/proj_with_seven_tasks/accounts/accounts	52ea139ea4ae3673

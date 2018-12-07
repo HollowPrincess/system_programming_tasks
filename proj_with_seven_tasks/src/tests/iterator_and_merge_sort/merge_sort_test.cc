@@ -1,6 +1,6 @@
-#include <../../../src/proj_with_seven_tasks/iterator_and_merge_sort/merge_sort.cc>
 #include <algorithm>
 #include <gtest/gtest.h>
+#include <proj_with_seven_tasks/iterator_and_merge_sort/merge_sort.cc>
 #include <vector>
 
 TEST(merge_sort_test, even_number_of_elements_in_vector) {

@@ -1,5 +1,5 @@
 #pragma once
-#include <../../../src/proj_with_seven_tasks/param_tests/MyArray2D.cc>
+#include <proj_with_seven_tasks/param_tests/MyArray2D.cc>
 
 template <typename T> class MyArray2D;
 

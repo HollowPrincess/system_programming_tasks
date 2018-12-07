@@ -1,0 +1,7 @@
+digraph "Graphical Class Hierarchy"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="My::group",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classMy_1_1group.html",tooltip="Class which contains information about groups(id, name, users list who are in the group) and creats a..."];
+}
