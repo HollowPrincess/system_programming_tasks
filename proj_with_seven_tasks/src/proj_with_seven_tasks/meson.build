@@ -1,4 +1,3 @@
-src = include_directories('.')
 subdir('accounts')
 subdir('iterator_and_merge_sort')
 subdir('LineNumberBuffer')
