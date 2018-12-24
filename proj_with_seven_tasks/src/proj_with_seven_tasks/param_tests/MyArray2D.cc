@@ -1,7 +1,7 @@
 #pragma once
+#include "proj_with_seven_tasks/param_tests/MyMaskedArray2D.cc"
 #include <cstdlib>
 #include <iostream>
-#include <proj_with_seven_tasks/param_tests/MyMaskedArray2D.cc>
 
 template <typename Z> class MyMaskedArray2D;
 

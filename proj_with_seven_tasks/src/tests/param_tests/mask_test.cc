@@ -1,6 +1,6 @@
+#include "proj_with_seven_tasks/param_tests/MyArray2D.cc"
+#include "proj_with_seven_tasks/param_tests/MyMaskedArray2D.cc"
 #include <gtest/gtest.h>
-#include <proj_with_seven_tasks/param_tests/MyArray2D.cc>
-#include <proj_with_seven_tasks/param_tests/MyMaskedArray2D.cc>
 
 struct array2D_param_for_mask {
   MyArray2D<double> inputLeft;

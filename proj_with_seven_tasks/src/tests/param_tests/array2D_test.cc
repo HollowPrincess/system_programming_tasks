@@ -1,5 +1,5 @@
+#include "proj_with_seven_tasks/param_tests/MyArray2D.cc"
 #include <gtest/gtest.h>
-#include <proj_with_seven_tasks/param_tests/MyArray2D.cc>
 #include <typeinfo>
 
 struct array2D_param_for_arithmetical_operators {

@@ -1,0 +1,14 @@
+[
+  {
+    "directory": "/home/svetlana/Documents/Projects/system_programming_tasks/geom_vector/build",
+    "command": "c++ -Isrc/geom_vector/src@geom_vector@@geom_vector@exe -Isrc/geom_vector -I../src/geom_vector -Isrc -I../src -fdiagnostics-color=always -fsanitize=address -fno-omit-frame-pointer --coverage -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++11 -g  -MD -MQ 'src/geom_vector/src@geom_vector@@geom_vector@exe/main.cc.o' -MF 'src/geom_vector/src@geom_vector@@geom_vector@exe/main.cc.o.d' -o 'src/geom_vector/src@geom_vector@@geom_vector@exe/main.cc.o' -c ../src/geom_vector/main.cc",
+    "file": "../src/geom_vector/main.cc",
+    "output": "src/geom_vector/src@geom_vector@@geom_vector@exe/main.cc.o"
+  },
+  {
+    "directory": "/home/svetlana/Documents/Projects/system_programming_tasks/geom_vector/build",
+    "command": "c++ -Isrc/tests/src@tests@@rotation_test.cc@exe -Isrc/tests -I../src/tests -Isrc -I../src -fdiagnostics-color=always -fsanitize=address -fno-omit-frame-pointer --coverage -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++11 -g -pthread  -MD -MQ 'src/tests/src@tests@@rotation_test.cc@exe/rotation_test.cc.o' -MF 'src/tests/src@tests@@rotation_test.cc@exe/rotation_test.cc.o.d' -o 'src/tests/src@tests@@rotation_test.cc@exe/rotation_test.cc.o' -c ../src/tests/rotation_test.cc",
+    "file": "../src/tests/rotation_test.cc",
+    "output": "src/tests/src@tests@@rotation_test.cc@exe/rotation_test.cc.o"
+  }
+]

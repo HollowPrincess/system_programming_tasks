@@ -1,6 +1,6 @@
+#include "proj_with_seven_tasks/tests_train/main.cc"
 #include <gtest/gtest.h>
 #include <ostream>
-#include <proj_with_seven_tasks/tests_train/main.cc>
 #include <sstream>
 #include <string>
 

@@ -64,3 +64,4 @@
 2	3364	1544201229099681999	src/proj_with_seven_tasks/accounts/src@proj_with_seven_tasks@accounts@@accounts@exe/accounts.cc.o	507332acfd8f834
 2	516	1544201377051262584	src/proj_with_seven_tasks/iterator_and_merge_sort/iterator_and_merge_sort	e9b70a30082f43d5
 2	536	1544201377071262584	src/proj_with_seven_tasks/accounts/accounts	52ea139ea4ae3673
+0	1176	1544202665915262584	build.ninja	4162f7e74d7be7ba

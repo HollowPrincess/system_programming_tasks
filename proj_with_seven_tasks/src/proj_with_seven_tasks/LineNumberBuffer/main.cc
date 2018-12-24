@@ -1,5 +1,5 @@
+#include "proj_with_seven_tasks/LineNumberBuffer/LineNumberBuffer.cc"
 #include <iostream>
-#include <proj_with_seven_tasks/LineNumberBuffer/LineNumberBuffer.cc>
 #include <string>
 
 int main() {

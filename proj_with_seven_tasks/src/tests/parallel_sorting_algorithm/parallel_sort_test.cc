@@ -1,5 +1,5 @@
+#include "proj_with_seven_tasks/iterator_and_merge_sort/merge_sort.cc"
 #include <gtest/gtest.h>
-#include <proj_with_seven_tasks/iterator_and_merge_sort/merge_sort.cc>
 #include <proj_with_seven_tasks/parallel_sorting_algorithm/parallel_sort.h>
 #include <vector>
 
