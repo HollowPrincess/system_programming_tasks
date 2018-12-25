@@ -1,0 +1,8 @@
+[
+  {
+    "directory": "/home/svetlana/Documents/Projects/system_programming_tasks/thread_class/build",
+    "command": "c++ -Isrc/thread_class/src@thread_class@@thread_class@exe -Isrc/thread_class -I../src/thread_class -Isrc -I../src -fdiagnostics-color=always -fsanitize=address -fno-omit-frame-pointer -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++11 -g  -MD -MQ 'src/thread_class/src@thread_class@@thread_class@exe/main.cc.o' -MF 'src/thread_class/src@thread_class@@thread_class@exe/main.cc.o.d' -o 'src/thread_class/src@thread_class@@thread_class@exe/main.cc.o' -c ../src/thread_class/main.cc",
+    "file": "../src/thread_class/main.cc",
+    "output": "src/thread_class/src@thread_class@@thread_class@exe/main.cc.o"
+  }
+]

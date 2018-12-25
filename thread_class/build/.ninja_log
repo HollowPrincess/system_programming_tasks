@@ -1,0 +1,18 @@
+# ninja log v5
+0	499	1545758646475855277	src/thread_class/src@thread_class@@thread_class@exe/main.cc.o	2180ee7d70573fce
+501	584	1545758646559855277	src/thread_class/thread_class	f18f7babbee4803c
+0	414	1545759197603855277	src/thread_class/src@thread_class@@thread_class@exe/main.cc.o	2180ee7d70573fce
+414	482	1545759197671855277	src/thread_class/thread_class	f18f7babbee4803c
+1	412	1545759418783855277	src/thread_class/src@thread_class@@thread_class@exe/main.cc.o	2180ee7d70573fce
+412	476	1545759418847855277	src/thread_class/thread_class	f18f7babbee4803c
+0	412	1545759529907855277	src/thread_class/src@thread_class@@thread_class@exe/main.cc.o	2180ee7d70573fce
+412	494	1545759529991855277	src/thread_class/thread_class	f18f7babbee4803c
+0	409	1545759545223855277	src/thread_class/src@thread_class@@thread_class@exe/main.cc.o	2180ee7d70573fce
+409	476	1545759545291855277	src/thread_class/thread_class	f18f7babbee4803c
+1	556	1545759618151855277	src/thread_class/src@thread_class@@thread_class@exe/main.cc.o	2180ee7d70573fce
+556	629	1545759618223855277	src/thread_class/thread_class	f18f7babbee4803c
+0	417	1545759638411855277	build.ninja	e7f00892e17a2bd7
+0	589	1545759639123855277	src/thread_class/src@thread_class@@thread_class@exe/main.cc.o	4bd8d7f96d89d2e1
+589	734	1545759639271855277	src/thread_class/thread_class	6fde1cb0518cd878
+2	550	1545759660615855277	src/thread_class/src@thread_class@@thread_class@exe/main.cc.o	4bd8d7f96d89d2e1
+550	625	1545759660687855277	src/thread_class/thread_class	6fde1cb0518cd878
