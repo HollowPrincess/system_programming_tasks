@@ -67,11 +67,15 @@ build src/geom_vector/src@geom_vector@@geom_vector@exe/main.cc.o: cpp_COMPILER .
 build src/geom_vector/geom_vector: cpp_LINKER src/geom_vector/src@geom_vector@@geom_vector@exe/main.cc.o
  LINK_ARGS = -fsanitize=address --coverage -Wl,--no-undefined -Wl,--as-needed
 
+build src/tests/src@tests@@rotation_test.cc@exe/main_fun_test.cc.o: cpp_COMPILER ../src/tests/main_fun_test.cc
+ DEPFILE = src/tests/src@tests@@rotation_test.cc@exe/main_fun_test.cc.o.d
+ ARGS = -Isrc/tests/src@tests@@rotation_test.cc@exe -Isrc/tests -I../src/tests -Isrc -I../src -fdiagnostics-color=always -fsanitize=address -fno-omit-frame-pointer --coverage -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++11 -g -pthread
+
 build src/tests/src@tests@@rotation_test.cc@exe/rotation_test.cc.o: cpp_COMPILER ../src/tests/rotation_test.cc
  DEPFILE = src/tests/src@tests@@rotation_test.cc@exe/rotation_test.cc.o.d
  ARGS = -Isrc/tests/src@tests@@rotation_test.cc@exe -Isrc/tests -I../src/tests -Isrc -I../src -fdiagnostics-color=always -fsanitize=address -fno-omit-frame-pointer --coverage -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++11 -g -pthread
 
-build src/tests/rotation_test.cc: cpp_LINKER src/tests/src@tests@@rotation_test.cc@exe/rotation_test.cc.o | /usr/lib/libgtest.a /usr/lib/libgtest_main.a
+build src/tests/rotation_test.cc: cpp_LINKER src/tests/src@tests@@rotation_test.cc@exe/main_fun_test.cc.o src/tests/src@tests@@rotation_test.cc@exe/rotation_test.cc.o | /usr/lib/libgtest.a /usr/lib/libgtest_main.a
  LINK_ARGS = -fsanitize=address --coverage -Wl,--no-undefined -Wl,--as-needed -Wl,--start-group -lgtest -lgtest_main -Wl,--end-group -pthread
 
 # Test rules

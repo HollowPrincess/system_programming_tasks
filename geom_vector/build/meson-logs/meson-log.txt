@@ -1,4 +1,4 @@
-Build started at 2018-12-24T23:03:54.600314
+Build started at 2018-12-28T23:37:49.253979
 Main binary: /usr/bin/python3
 Python system: Linux
 The Meson build system
@@ -18,8 +18,8 @@ Adding test "rotation.h"
 Build targets in project: 2
 Found ninja-1.8.2.git.kitware.dyndep-1.jobserver-1 at /home/svetlana/.local/bin/ninja
 Running compile:
-Working directory:  /tmp/tmpx_7aoep9
-Command line:  c++ /tmp/tmpx_7aoep9/testfile.cpp -pipe -D_FILE_OFFSET_BITS=64 -c -o /tmp/tmpx_7aoep9/output.obj -std=c++11 
+Working directory:  /tmp/tmpbl2vwdk2
+Command line:  c++ /tmp/tmpbl2vwdk2/testfile.cpp -pipe -D_FILE_OFFSET_BITS=64 -c -o /tmp/tmpbl2vwdk2/output.obj -std=c++11 
 
 Code:
  int i = static_cast<int>(0);
@@ -29,8 +29,8 @@ Compiler stderr:
  
 Compiler accepts -std=c++11: YES
 Running compile:
-Working directory:  /tmp/tmpmihberb7
-Command line:  c++ /tmp/tmpmihberb7/testfile.cpp -pipe -D_FILE_OFFSET_BITS=64 -c -o /tmp/tmpmihberb7/output.obj -O0 -fpermissive --print-search-dirs 
+Working directory:  /tmp/tmpkewpc_ke
+Command line:  c++ /tmp/tmpkewpc_ke/testfile.cpp -pipe -D_FILE_OFFSET_BITS=64 -c -o /tmp/tmpkewpc_ke/output.obj -O0 -fpermissive --print-search-dirs 
 
 Code:
  

@@ -57,3 +57,9 @@
 1415	1565	1545682588801624556	src/tests/rotation_test.cc	fcb5abf591bb9fa8
 1565	1794	0	meson-test	75ab40a16ddc907e
 0	521	0	meson-coverage-text	260aa7742651d08f
+0	1754	1546029374408592320	build.ninja	c26a525c83fdf5e2
+104	3511	1546029378042408320	src/tests/src@tests@@rotation_test.cc@exe/main_fun_test.cc.o	26bd2b6c61fdf23
+3511	4410	1546029378942858321	src/tests/rotation_test.cc	e4a290b227ebba9c
+0	484	1546029469472100320	build.ninja	c26a525c83fdf5e2
+1	637	0	meson-test	75ab40a16ddc907e
+0	1947	0	meson-coverage-text	260aa7742651d08f

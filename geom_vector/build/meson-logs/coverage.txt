@@ -4,9 +4,10 @@ Directory: /home/svetlana/Documents/Projects/system_programming_tasks/geom_vecto
 ------------------------------------------------------------------------------
 File                                       Lines    Exec  Cover   Missing
 ------------------------------------------------------------------------------
-../src/geom_vector/main.cc                     1       0     0%   1
+../src/geom_vector/main.cc                     1       1   100%   
 ../src/geom_vector/rotation.h                 34      34   100%   
+../src/tests/main_fun_test.cc                  1       1   100%   
 ../src/tests/rotation_test.cc                 16      16   100%   
 ------------------------------------------------------------------------------
-TOTAL                                         51      50    98%
+TOTAL                                         52      52   100%
 ------------------------------------------------------------------------------

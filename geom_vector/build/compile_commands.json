@@ -7,6 +7,12 @@
   },
   {
     "directory": "/home/svetlana/Documents/Projects/system_programming_tasks/geom_vector/build",
+    "command": "c++ -Isrc/tests/src@tests@@rotation_test.cc@exe -Isrc/tests -I../src/tests -Isrc -I../src -fdiagnostics-color=always -fsanitize=address -fno-omit-frame-pointer --coverage -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++11 -g -pthread  -MD -MQ 'src/tests/src@tests@@rotation_test.cc@exe/main_fun_test.cc.o' -MF 'src/tests/src@tests@@rotation_test.cc@exe/main_fun_test.cc.o.d' -o 'src/tests/src@tests@@rotation_test.cc@exe/main_fun_test.cc.o' -c ../src/tests/main_fun_test.cc",
+    "file": "../src/tests/main_fun_test.cc",
+    "output": "src/tests/src@tests@@rotation_test.cc@exe/main_fun_test.cc.o"
+  },
+  {
+    "directory": "/home/svetlana/Documents/Projects/system_programming_tasks/geom_vector/build",
     "command": "c++ -Isrc/tests/src@tests@@rotation_test.cc@exe -Isrc/tests -I../src/tests -Isrc -I../src -fdiagnostics-color=always -fsanitize=address -fno-omit-frame-pointer --coverage -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++11 -g -pthread  -MD -MQ 'src/tests/src@tests@@rotation_test.cc@exe/rotation_test.cc.o' -MF 'src/tests/src@tests@@rotation_test.cc@exe/rotation_test.cc.o.d' -o 'src/tests/src@tests@@rotation_test.cc@exe/rotation_test.cc.o' -c ../src/tests/rotation_test.cc",
     "file": "../src/tests/rotation_test.cc",
     "output": "src/tests/src@tests@@rotation_test.cc@exe/rotation_test.cc.o"
