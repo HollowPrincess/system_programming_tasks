@@ -23,8 +23,9 @@ public:
     child_stack_end = child_stack + stack_size;
     CHECK(pid = clone(fun, child_stack_end,
                       CLONE_VM | CLONE_FS | CLONE_FILES | CLONE_SIGHAND |
-CLONE_THREAD | CLONE_SYSVSEM | CLONE_SETTLS |
-CLONE_PARENT_SETTID | CLONE_CHILD_CLEARTID, 0));
+                          CLONE_SYSVSEM | CLONE_PARENT_SETTID |
+                          CLONE_CHILD_CLEARTID | SIGCHLD,
+                      0));
     status = 0;
   };
 

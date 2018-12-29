@@ -1,4 +1,4 @@
-Build started at 2018-12-25T20:40:38.268737
+Build started at 2018-12-29T15:07:32.956466
 Main binary: /usr/bin/python3
 Python system: Linux
 The Meson build system
@@ -16,8 +16,8 @@ WARNING: This will become a hard error in the future.
 Build targets in project: 1
 Found ninja-1.8.2.git.kitware.dyndep-1.jobserver-1 at /home/svetlana/.local/bin/ninja
 Running compile:
-Working directory:  /tmp/tmpqnvosivl
-Command line:  c++ /tmp/tmpqnvosivl/testfile.cpp -pipe -D_FILE_OFFSET_BITS=64 -c -o /tmp/tmpqnvosivl/output.obj -std=c++11 
+Working directory:  /tmp/tmpq4fje1d4
+Command line:  c++ /tmp/tmpq4fje1d4/testfile.cpp -pipe -D_FILE_OFFSET_BITS=64 -c -o /tmp/tmpq4fje1d4/output.obj -std=c++11 
 
 Code:
  int i = static_cast<int>(0);
@@ -27,8 +27,8 @@ Compiler stderr:
  
 Compiler accepts -std=c++11: YES
 Running compile:
-Working directory:  /tmp/tmp4wfs46pr
-Command line:  c++ /tmp/tmp4wfs46pr/testfile.cpp -pipe -D_FILE_OFFSET_BITS=64 -c -o /tmp/tmp4wfs46pr/output.obj -O0 -fpermissive --print-search-dirs 
+Working directory:  /tmp/tmpji8ttg70
+Command line:  c++ /tmp/tmpji8ttg70/testfile.cpp -pipe -D_FILE_OFFSET_BITS=64 -c -o /tmp/tmpji8ttg70/output.obj -O0 -fpermissive --print-search-dirs 
 
 Code:
  
