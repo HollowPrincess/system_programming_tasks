@@ -49,7 +49,7 @@ public:
     size_t tmpStack_size=rightThread.stack_size;
     char *tmpchild_stack=new char;
     tmpchild_stack=rightThread.child_stack;
-    void *tmpchild_stack_end=new void;
+    void *tmpchild_stack_end;
     tmpchild_stack_end=rightThread.child_stack_end; 
     int tmpStatus = rightThread.status;
 
