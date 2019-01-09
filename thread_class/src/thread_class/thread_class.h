@@ -21,11 +21,9 @@ public:
     stack_size = 1024 * 10;
     child_stack = new char[stack_size];
     child_stack_end = child_stack + stack_size;
-    CHECK(pid = clone(fun, child_stack_end,
-                      CLONE_VM | CLONE_FS | CLONE_FILES | CLONE_SIGHAND |
-                          CLONE_SYSVSEM | CLONE_PARENT_SETTID |
-                          CLONE_CHILD_CLEARTID | SIGCHLD,
-                      0));
+    CHECK(pid = clone(
+              fun, child_stack_end,
+              CLONE_VM | CLONE_FS | CLONE_FILES | CLONE_SIGHAND | SIGCHLD, 0));
     status = 0;
   };
 
@@ -34,7 +32,7 @@ public:
 
   // метод joinable
   bool joinable() {
-    if (pid > 0 && status == 0 && (kill(pid,0) == 0)) {
+    if (pid > 0 && status == 0 && kill(pid, 0)) {
       return true;
     };
     return false;
@@ -46,23 +44,21 @@ public:
   // метод swap
   void swap(thread_class &rightThread) {
     pid_t tmpPid = rightThread.pid;
-    size_t tmpStack_size=rightThread.stack_size;
-    char *tmpchild_stack=new char;
-    tmpchild_stack=rightThread.child_stack;
-    void *tmpchild_stack_end;
-    tmpchild_stack_end=rightThread.child_stack_end; 
+    size_t tmpstack_size = rightThread.stack_size;
+    char *tmpchild_stack = rightThread.child_stack;
+    void *tmpchild_stack_end = rightThread.child_stack_end;
     int tmpStatus = rightThread.status;
 
     rightThread.pid = this->pid;
-    rightThread.stack_size=this->stack_size;
-    rightThread.child_stack=this->child_stack;
-    rightThread.child_stack_end=this->child_stack_end;
+    rightThread.stack_size = this->stack_size;
+    rightThread.child_stack = this->child_stack;
+    rightThread.child_stack_end = this->child_stack_end;
     rightThread.status = this->status;
 
     this->pid = tmpPid;
-    this->stack_size=tmpStack_size;
-    this->child_stack=tmpchild_stack;
-    this->child_stack_end=tmpchild_stack_end;
+    this->stack_size = tmpstack_size;
+    this->child_stack = tmpchild_stack;
+    this->child_stack_end = tmpchild_stack_end;
     this->status = tmpStatus;
   };
 
@@ -81,7 +77,11 @@ public:
 
   // деструктор
   ~thread_class() {
-    kill(pid, SIGTERM);
-    delete[] child_stack;
+    if (kill(pid, 0)) {
+      kill(pid, SIGTERM);
+    };
+    if (child_stack) {
+      delete[] child_stack;
+    };
   };
 };
