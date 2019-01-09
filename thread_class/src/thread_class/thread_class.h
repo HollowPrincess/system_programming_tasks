@@ -34,7 +34,7 @@ public:
 
   // метод joinable
   bool joinable() {
-    if (pid > 0 && status == 0) {
+    if (pid > 0 && status == 0 && (kill(pid,0) == 0)) {
       return true;
     };
     return false;
@@ -46,12 +46,23 @@ public:
   // метод swap
   void swap(thread_class &rightThread) {
     pid_t tmpPid = rightThread.pid;
+    size_t tmpStack_size=rightThread.stack_size;
+    char *tmpchild_stack=new char;
+    tmpchild_stack=rightThread.child_stack;
+    void *tmpchild_stack_end=new void;
+    tmpchild_stack_end=rightThread.child_stack_end; 
     int tmpStatus = rightThread.status;
 
     rightThread.pid = this->pid;
+    rightThread.stack_size=this->stack_size;
+    rightThread.child_stack=this->child_stack;
+    rightThread.child_stack_end=this->child_stack_end;
     rightThread.status = this->status;
 
     this->pid = tmpPid;
+    this->stack_size=tmpStack_size;
+    this->child_stack=tmpchild_stack;
+    this->child_stack_end=tmpchild_stack_end;
     this->status = tmpStatus;
   };
 
